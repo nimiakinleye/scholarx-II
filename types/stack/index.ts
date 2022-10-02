@@ -1,0 +1,32 @@
+export type StackPropsType = {
+  children?: JSX.Element | JSX.Element[];
+
+  width?: string;
+  height?: string;
+  minHeight?: string;
+  maxHeight?: string;
+  minWidth?: string;
+  maxWidth?: string;
+  gap?: string;
+  m?: string;
+  p?: string;
+  direction?: string;
+  color?: string;
+  bgColor?: string;
+  flexWrap?: string;
+  textAlign?: string;
+  alignItems?: string;
+  justifyContent?: string;
+  sm_direction?: string;
+  lg_direction?: string;
+  sm_alignItems?: string;
+  lg_alignItems?: string;
+  sm_textAlign?: string;
+  sm_gap?: string;
+  sm_m?: string;
+  sm_p?: string;
+  sm_width?: string;
+  sm_height?: string;
+  rounded?: string;
+  className?:string;
+};
