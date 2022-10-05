@@ -10,7 +10,7 @@ export default function FocusContainer() {
   return (
     <ProductsWrapper>
       <Container>
-        <Stack>
+        <Stack width="100%">
           <Stack color={Colors.primary}>
             <Text.Small>Our Products</Text.Small>
             <Text lineHeight="48px" as="h1">Our dreams have grown bigger with time.</Text>

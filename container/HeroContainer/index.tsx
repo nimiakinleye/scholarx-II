@@ -9,7 +9,7 @@ export default function HeroContainer() {
     <HeroWrapper>
       <Overlay opacity={0.55} color="#000" />
       <Container className="content">
-        <Stack>
+        <Stack width="100%">
           <Stack m={"77px 0 0 0"}>
             <HeaderContainer />
           </Stack>
