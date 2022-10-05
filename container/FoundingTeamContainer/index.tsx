@@ -11,13 +11,13 @@ import Olabisi from "../../assets/images/Olabisi.png"
 export default function FoundingTeam(){
     return(
         <Container>
-            <Stack m={"80px 0 0 0"}>
+            <Stack m={"80px  0 0"}>
                 <Stack>
                     <Text as="h3" color={Colors.primary}>
                     Our Founding Team
                     </Text>
                 </Stack>
-                <Stack className="founding-team-members" direction="row" gap={"22px"}  p={"40px 0 0 0"}>
+                <Stack className="founding-team-members" direction="row" gap={"22px"}  p={"40px 0 40px 0"} >
                     <Stack>
                         <Image src={Bola} alt={"Bola Lawal's Picture"}/>
                         <Stack textAlign={"center"}>

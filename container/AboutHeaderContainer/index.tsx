@@ -12,7 +12,7 @@ export default function AboutHeader() {
         <Stack m={"50px 0 0 0"}>
           <HeaderContainer color={Colors.primary}/>
         </Stack>
-        <Stack direction="row" m={"80px 0 0 0"} justifyContent={"space-between"}>
+        <Stack direction="row" m={"80px 0 0 0"} justifyContent={"space-between"} sm_direction="column">
           <Stack className={"headerText"} >
             <Text as="h3" color={Colors.primary} weight={"700"} >About Us</Text>
             <Text as="p" weight={"400"} color={Colors.gray_600} size={"18px"} lineHeight={"36px"} p={"24px 0 0 0"} >
