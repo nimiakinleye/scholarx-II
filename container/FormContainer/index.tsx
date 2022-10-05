@@ -5,10 +5,10 @@ import { Colors } from "../../theme/colors";
 
 export default function Form() {
   return (
-
-      <Stack p={"10px"}>
+<FormWrapper>
+<Stack p={"50px 20px 0"}>
       <form>
-        <Stack direction="row" sm_direction="column" >
+        <Stack direction="row" md_direction="column" gap={"16px"}>
           <Stack>
             <label htmlFor="first">First Name</label>
             <input
@@ -48,20 +48,16 @@ export default function Form() {
         </Stack>
       </form>
       <label htmlFor="help">How can we help you?</label>
-      <textarea placeholder="input text here" />
-      {/* <Button
-        type="submit"
-        width={"124px"}
-        height={"44px"}
-        background-color={Colors.yellow}
-        color={Colors.yellow}
-      /> */}
-      <Stack direction="row" justifyContent="center">
-              <Button width="124px" type="submit" color={Colors.yellow} text={Colors.neutral}>
+      <textarea placeholder="input text here" cols={30} rows={10} />
+     
+      <Stack direction="row" justifyContent="center" m={"30px 0 50px 0"}>
+              <Button width="auto" type="submit" color={Colors.yellow} text={Colors.neutral}>
                 Submit
               </Button>
             </Stack>
     </Stack>
     
+</FormWrapper>
+      
   );
 }

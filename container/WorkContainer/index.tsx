@@ -9,7 +9,7 @@ export default function Team(){
         <Container>
             <Stack m={"80px 0 0 0"}>
                 <Stack>
-                    <Text as="h3" color={Colors.primary} weight={"700"} lineHeight={"64px"} >
+                    <Text as="h3" color={Colors.primary} weight={"700"} lineHeight={"64px"} sm_size={"12px"} >
                     Our Amazing Team at Work
                     </Text>
                 </Stack>
