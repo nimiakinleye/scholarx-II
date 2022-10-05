@@ -29,4 +29,5 @@ export type StackPropsType = {
   sm_height?: string;
   rounded?: string;
   className?:string;
+  sm_justifyContent?:string;
 };

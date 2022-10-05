@@ -3,7 +3,7 @@ import { Stack, Text } from '../../components'
 
 export default function StatisticsContainer() {
   return (
-    <Stack justifyContent='center' p="81px 0" gap="80px" direction="row" flexWrap='no-wrap'>
+    <Stack justifyContent='center' p="81px 0" gap="80px" direction="row" flexWrap='wrap'>
       {[1, 2, 3].map(() => {
         return (
           <Stack width="auto" alignItems='center'>
