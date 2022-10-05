@@ -6,7 +6,7 @@ export const StackWrapper = styled.div<StackPropsType>`
   display: flex;
   flex-direction: ${({ direction }) => (direction ? direction : "column")};
   flex-wrap: ${({flexWrap}) => (flexWrap ? flexWrap : "auto")};
-  width: ${({ width }) => (width ? width : "100%")};
+  width: ${({ width }) => (width ? width : "")};
   max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : "")};
   height: ${({ height }) => (height ? height : "")};
   gap: ${({ gap }) => (gap ? gap : "")};
