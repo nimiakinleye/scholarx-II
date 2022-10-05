@@ -24,10 +24,12 @@ export const StackWrapper = styled.div<StackPropsType>`
   @media (max-width: ${Screen.lg}) {
     flex-direction: ${({ sm_direction }) => (sm_direction ? sm_direction : "")};
     align-items: ${({ sm_alignItems }) => (sm_alignItems ? sm_alignItems : "")};
-    text-align: ${({ sm_alignItems }) => (sm_alignItems ? sm_alignItems : "")};
+    text-align: ${({ sm_textAlign }) => (sm_textAlign ? sm_textAlign : "")};
     width: ${({ sm_width }) => (sm_width ? sm_width : "")};
     margin: ${({ sm_m }) => (sm_m ? sm_m : "")};
     gap: ${({ sm_gap }) => (sm_gap ? sm_gap : "")};
     padding: ${({ sm_p }) => (sm_p ? sm_p : "")};
+    justify-content: ${({ sm_justifyContent }) => (sm_justifyContent ? sm_justifyContent : "")};
+    direction: ${({ sm_direction }) => (sm_direction? sm_direction : "")};
   }
 `;

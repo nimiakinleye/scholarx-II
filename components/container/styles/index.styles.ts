@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Screen } from "../../../theme/screens";
 
 export const ContainerWrapper = styled.div`
   padding: 0 130px;
@@ -7,6 +8,10 @@ export const ContainerWrapper = styled.div`
   // width: 100%;
   align-items: center;
   * {
-    max-width: 1193px;
+    max-width: 2000px;
+  }
+
+  @media(max-width: ${Screen.lg}) {
+    padding: 0 20px;
   }
 `;
