@@ -5,18 +5,22 @@ export type TextOwnProps<E extends React.ElementType> = {
   as?: E;
   children: string | number | string & number | JSX.Element | JSX.Element[];
   m?: string;
+  p?: string;
   size?:string;
   lineHeight?:string;
   align?:string;
+  weight?:string;
 }
 
 export type TextPropsType = {
   // as?:React.ElementType;
   children: string | number | string & number | JSX.Element | JSX.Element[];
   m?: string;
+  p?: string;
   size?:string;
   lineHeight?:string;
   align?:string;
+  weight?:string;
 }
 
 type TextProps<E extends React.ElementType> = TextOwnProps<E> & Omit<React.ComponentProps<E>, keyof TextOwnProps<E>>
