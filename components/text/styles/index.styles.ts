@@ -12,7 +12,7 @@ export const TextWrapper = styled.div<TextPropsType>`
   line-height: ${({lineHeight}) => lineHeight ? lineHeight : "32px"};
   align: ${({align}) => align ? align : ""};
 
-  @media (max-width: ${Screen.md}) {
+  @media (max-width: ${Screen.sm}) {
     font-size: ${({ sm_size }) => (sm_size ? sm_size: "")};
     text-align: ${({sm_align}) => sm_align ? sm_align : ""};
   }
