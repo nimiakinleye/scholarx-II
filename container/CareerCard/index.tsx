@@ -42,7 +42,7 @@ export default function CareerCard(){
                 borderwidth={"0 0 1px 0"}
                 bordercolor={Colors.yellow}
                 borderstyle={"solid"}
-                width={"35%"}
+                width={"38%"}
               >
                 <Text textalign="center" size={"18px"} color={Colors.yellow}>
                   Refer a friend
@@ -57,7 +57,7 @@ export default function CareerCard(){
                 alignItems={"center"}
               >
                 <ShareIcon color={Colors.neutral_gray100} />
-                <Text size={"18px"} m={"0 0 0 8px"} color={Colors.neutral_gray}>
+                <Text size={"18px"} m={"0 0 0 8px"} color={Colors.neutral_gray100}>
                   Share
                 </Text>
               </Stack>
