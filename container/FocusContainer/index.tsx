@@ -23,9 +23,9 @@ export default function FocusContainer() {
             <Text lineHeight="48px" as="h1">We are focused on imparting lifelong skills to Africans</Text>
           </Stack>
           <Stack m="48px 0 0 0" gap="24px" direction="row" sm_justifyContent='center' justifyContent='flex-start' flexWrap='wrap'>
-            {focus_cards.map((card:{title:string, content:string, image: StaticImageData}) => {
+            {focus_cards.map((card:{title:string, content:string, image: StaticImageData}, i) => {
               return (
-                <FocusCard details={card}/>
+                <FocusCard key={i} details={card}/>
               )
             })}
           </Stack>

@@ -26,9 +26,10 @@ export const StackWrapper = styled.div<StackPropsType>`
 
   @media (max-width: ${Screen.lg}) {
     flex-direction: ${({ sm_direction }) => (sm_direction ? sm_direction : "")};
+    flex-wrap: ${({sm_flexWrap}) => (sm_flexWrap ? sm_flexWrap : "auto")};
     align-items: ${({ sm_alignItems }) => (sm_alignItems ? sm_alignItems : "")};
     text-align: ${({ sm_textAlign }) => (sm_textAlign ? sm_textAlign : "")};
-    width: ${({ sm_width }) => sm_width};
+    width: ${({ sm_width }) => sm_width?sm_width:""};
     margin: ${({ sm_m }) => (sm_m ? sm_m : "")};
     gap: ${({ sm_gap }) => (sm_gap ? sm_gap : "")};
     padding: ${({ sm_p }) => (sm_p ? sm_p : "")};
@@ -47,5 +48,17 @@ export const StackWrapper = styled.div<StackPropsType>`
   @media (max-width: ${Screen.xxsm}) {
     width: ${({ xsm_width }) => xsm_width};
     margin: ${({ xxm }) => (xxm ? xxm : "")};
+  }
+  @media (max-width: ${Screen.md}) {
+    flex-direction: ${({ md_direction }) => (md_direction ? md_direction : "")};
+    flex-wrap: ${({md_flexWrap}) => (md_flexWrap ? md_flexWrap : "auto")};
+    align-items: ${({ md_alignItems }) => (md_alignItems ? md_alignItems : "")};
+    text-align: ${({ md_textAlign }) => (md_textAlign ? md_textAlign : "")};
+    width: ${({ md_width }) =>md_width?md_width:""};
+    margin: ${({ md_m }) => (md_m ? md_m : "")};
+    gap: ${({ md_gap }) => (md_gap ? md_gap : "")};
+    padding: ${({ md_p }) => (md_p ? md_p : "")};
+    justify-content: ${({ md_justifyContent }) => (md_justifyContent ? md_justifyContent : "")};
+    direction: ${({ md_direction }) => (md_direction? md_direction : "")};
   }
 `;

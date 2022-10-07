@@ -5,6 +5,7 @@ import { ButtonPropsType } from "../../../types/button";
 export const ButtonWrapper = styled.button<ButtonPropsType>`
   padding: ${({ size }) => (size === "lg" ? "18px 32px" : "14px 16px")};
   text-transform: capitalize;
+  
   display: flex;
   border: none;
   margin: ${({ m }) => (m ? m : "")};
