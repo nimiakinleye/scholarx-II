@@ -7,8 +7,10 @@ export type TextOwnProps<E extends React.ElementType> = {
   m?: string;
   p?: string;
   size?:string;
+  sm_size?:string;
   lineHeight?:string;
   align?:string;
+  sm_align?:string;
   weight?:string;
 }
 
@@ -18,8 +20,10 @@ export type TextPropsType = {
   m?: string;
   p?: string;
   size?:string;
+  sm_size?:string,
   lineHeight?:string;
   align?:string;
+  sm_align?:string;
   weight?:string;
 }
 

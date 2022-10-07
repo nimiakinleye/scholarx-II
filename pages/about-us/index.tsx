@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { AboutHeader, Team, FoundingTeam, Contact} from '../../container'
+import { AboutHeader, Team, FoundingTeam, Contact, FooterContainer} from '../../container'
 
 
 const About: NextPage = () => {
@@ -16,6 +16,7 @@ const About: NextPage = () => {
         <Team/> 
         <FoundingTeam/>
         <Contact/>
+        <FooterContainer/>
 
         
      
