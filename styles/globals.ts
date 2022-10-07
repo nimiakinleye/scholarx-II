@@ -22,4 +22,8 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 64px;
     letter-spacing: 0.01em;
   }
+
+  .z-1 {
+    z-index: 1;
+  }
 `;

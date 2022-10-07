@@ -16,7 +16,7 @@ export default function FocusContainer() {
             <Text lineHeight="48px" as="h1">Our dreams have grown bigger with time.</Text>
           </Stack>
           <Stack m="48px 0 0 0" direction="row" justifyContent='space-between' alignItems='center' sm_direction='column' flexWrap='wrap'>
-            <Stack direction="column" width="400px" height="469px">
+            <Stack direction="column" width="350px" height="469px">
               <Image width="100%" height="100%" objectFit='cover' layout='responsive' src={PhoneMockup} />
             </Stack>
             <Stack maxWidth="517px" sm_textAlign='center'>
@@ -32,7 +32,7 @@ export default function FocusContainer() {
             </Stack>
           </Stack>
           <Stack m="48px 0 0 0" direction="row-reverse" justifyContent='space-between' alignItems='center' sm_direction='column' flexWrap='wrap'>
-            <Stack direction="column" width="400px" height="350px">
+            <Stack direction="column" width="350px" height="350px">
               <Image width="100%" height="100%" objectFit='contain' layout='responsive' src={LaptopMockup} />
             </Stack>
             <Stack maxWidth="517px" sm_textAlign='center'>
