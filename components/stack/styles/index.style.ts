@@ -5,7 +5,7 @@ import { Screen } from "../../../theme/screens";
 export const StackWrapper = styled.div<StackPropsType>`
   display: flex;
   flex-direction: ${({ direction }) => (direction ? direction : "column")};
-  flex-wrap: ${({flexWrap}) => (flexWrap ? flexWrap : "auto")};
+  flex-wrap: ${({ flexWrap }) => (flexWrap ? flexWrap : "auto")};
   width: ${({ width }) => (width ? width : "")};
   max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : "")};
   height: ${({ height }) => (height ? height : "")};
@@ -19,7 +19,10 @@ export const StackWrapper = styled.div<StackPropsType>`
   justify-content: ${({ justifyContent }) =>
     justifyContent ? justifyContent : ""};
   text-align: ${({ textAlign }) => (textAlign ? textAlign : "")};
-  min-height: ${({minHeight}) => (minHeight ? minHeight : "")};
+  min-height: ${({ minHeight }) => (minHeight ? minHeight : "")};
+  border-width: ${({ borderwidth }) => (borderwidth ? borderwidth : "")};
+  border-style: ${({ borderstyle }) => (borderstyle ? borderstyle : "")};
+  border-color: ${({ bordercolor }) => (bordercolor ? bordercolor : "")};
 
   @media (max-width: ${Screen.lg}) {
     flex-direction: ${({ sm_direction }) => (sm_direction ? sm_direction : "")};
@@ -29,7 +32,20 @@ export const StackWrapper = styled.div<StackPropsType>`
     margin: ${({ sm_m }) => (sm_m ? sm_m : "")};
     gap: ${({ sm_gap }) => (sm_gap ? sm_gap : "")};
     padding: ${({ sm_p }) => (sm_p ? sm_p : "")};
-    justify-content: ${({ sm_justifyContent }) => (sm_justifyContent ? sm_justifyContent : "")};
-    direction: ${({ sm_direction }) => (sm_direction? sm_direction : "")};
+    justify-content: ${({ sm_justifyContent }) =>
+      sm_justifyContent ? sm_justifyContent : ""};
+    direction: ${({ sm_direction }) => (sm_direction ? sm_direction : "")};
+  }
+
+  @media (max-width: ${Screen.md}) {
+    width: ${({ md_width }) => md_width};
+  }
+  @media (max-width: ${Screen.xsm}) {
+    width: ${({ xsm_width }) => xsm_width};
+    margin: ${({ xm }) => (xm ? xm : "")};
+  }
+  @media (max-width: ${Screen.xxsm}) {
+    width: ${({ xsm_width }) => xsm_width};
+    margin: ${({ xxm }) => (xxm ? xxm : "")};
   }
 `;

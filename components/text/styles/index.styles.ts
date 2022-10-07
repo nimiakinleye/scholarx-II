@@ -8,4 +8,7 @@ export const TextWrapper = styled.div<TextPropsType>`
   font-size: ${({size}) => size ?size : "24px"};
   line-height: ${({lineHeight}) => lineHeight ? lineHeight : "32px"};
   align: ${({align}) => align ? align : ""};
-`
+  text-align: ${({ textalign }) => (textalign ? textalign : "")};
+  font-weight: ${({ fontweight }) => (fontweight ? fontweight : "")}; ;
+
+  `
