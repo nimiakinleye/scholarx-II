@@ -31,7 +31,7 @@ export default function CareerCard(){
               height={"70px"}
               p={"0 0 16px 0"}
               borderwidth={"0 0 1px 0"}
-              bordercolor={Colors.neutral_gray}
+              bordercolor={Colors.neutral_gray100}
               borderstyle={"solid"}
               direction="row"
               alignItems={"center"}
@@ -56,7 +56,7 @@ export default function CareerCard(){
                 justifyContent="center"
                 alignItems={"center"}
               >
-                <ShareIcon color={Colors.neutral_gray} />
+                <ShareIcon color={Colors.neutral_gray100} />
                 <Text size={"18px"} m={"0 0 0 8px"} color={Colors.neutral_gray}>
                   Share
                 </Text>
@@ -66,7 +66,7 @@ export default function CareerCard(){
               <Text
                 size={"18px"}
                 textalign="center"
-                color={Colors.neutral_gray}
+                color={Colors.neutral_gray100}
               >
                 Software Development
               </Text>

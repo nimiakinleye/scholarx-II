@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { AboutHeader, Team, FoundingTeam, Contact, FooterContainer} from '../../container'
+import { AboutHeader, Team, FoundingTeam, Contact, FooterContainer} from '../../container';
 
 
 const About: NextPage = () => {
@@ -12,9 +12,14 @@ const About: NextPage = () => {
         <meta name="description" content="about us page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-<<<<<<< HEAD
-      <Container>Toluwanimi</Container>
-=======
-        <AboutHeader/> 
+
+      <AboutHeader/> 
         <Team/> 
         <FoundingTeam/>
+        <Contact/>
+        <FooterContainer/>
+        </>
+  );
+};
+        
+export default About;

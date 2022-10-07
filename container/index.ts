@@ -11,7 +11,6 @@ export { default as Form } from "./FormContainer";
 export { default as Contact } from "./ContactContainer";
 export { default as SubscribeContainer } from "./Subscribe";
 export { default as FooterContainer } from "./Footer";
-<<<<<<< HEAD
 
 export { default as NoCareerContainer } from "./NoCareerContainer";
 export { default as CareerCard } from "./CareerCard";
@@ -20,6 +19,4 @@ export { default as CareerContainer } from "./CareerContainer";
 export { default as CareerHeroContainer } from "./CareerHeroContainer";
 export { default as SingleCareerContainer } from "./SingleCareerContainer";
 export { default as ReferformContainer } from "./ReferformContainer";
-=======
 export { default as ProjectsContainer } from "./ProjectsContainer";
->>>>>>> 07e4ee528b187a8f5514efcf58dcfe214163c97d

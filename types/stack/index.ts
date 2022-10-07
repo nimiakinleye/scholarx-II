@@ -35,25 +35,17 @@ export type StackPropsType = {
   md_p?: string;
   sm_width?: string;
   md_width?: string;
-<<<<<<< HEAD
   xsm_width?: string;
   xm?: string;
   xxm?: string;
-=======
->>>>>>> 07e4ee528b187a8f5514efcf58dcfe214163c97d
   sm_height?: string;
   md_height?: string;
   rounded?: string;
-<<<<<<< HEAD
   className?: string;
   sm_justifyContent?: string;
   borderwidth?: string;
   borderstyle?: string;
   bordercolor?: string;
   key?: number;
-=======
-  className?:string;
-  sm_justifyContent?:string;
   md_justifyContent?:string;
->>>>>>> 07e4ee528b187a8f5514efcf58dcfe214163c97d
 };
