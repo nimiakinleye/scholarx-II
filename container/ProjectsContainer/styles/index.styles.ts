@@ -29,5 +29,6 @@ export const ListProjectsWrapper = styled.div`
 
   @media(max-width: ${Screen.md}) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
+    
   }
 `
