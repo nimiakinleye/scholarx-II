@@ -7,6 +7,7 @@ export const CareerHeroWrapper = styled.div`
   background-size: cover;
   height: 80vh;
   position: relative;
+  width: auto;
 
   .content {
     position: relative;

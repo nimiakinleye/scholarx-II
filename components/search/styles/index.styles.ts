@@ -4,7 +4,7 @@ import { Colors } from "../../../theme/colors";
 export const SearchWrapper = styled.div`
   border: 1px solid ${Colors.text_gray};
   height: 40px;
-  width: 48%;
+  width: auto;
   input::placeholder{
     color: ${Colors.text_gray};
   }
