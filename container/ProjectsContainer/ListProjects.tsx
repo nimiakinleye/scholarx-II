@@ -7,7 +7,7 @@ export default function ListProjects({projects, count}:ProjectListProps) {
   return (
     <ListProjectsWrapper>
       {projects?.map((project, i) => {
-        return <ProjectCard project={project}/>
+        return <ProjectCard key={i} project={project}/>
       })}
     </ListProjectsWrapper>
   )
