@@ -22,4 +22,8 @@ export { default as ProjectsContainer } from "./ProjectsContainer";
 export{default as Hero} from "./ProjectHeroContainer"
 export {default as ProjectCard} from "./ProjectsContainer"
 export {default as ListProjects} from "./ProjectsContainer"
-export{default as ProjectsCards} from "./ProjectsCardContainer"
+export{default as ProjectsCards} from "./ProjectsCardContainer";
+export {default as IkoroduDetails} from "./IkoroduContainer"
+export {default as MoreProjects} from "./MoreProjectsContainer"
+
+
