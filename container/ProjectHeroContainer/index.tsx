@@ -5,7 +5,7 @@ import { Button, Container, Overlay, Stack, Text } from '../../components'
 import { Colors } from '../../theme/colors'
 
 
-export default function Hero() {
+export default function Hero({title}:{title?:string}) {
   return (
     <HeroWrapper>
       <Overlay opacity={0.55} color="#000" />
@@ -16,7 +16,7 @@ export default function Hero() {
           </Stack>
           <Stack maxWidth='552px' gap="24px" color={"#fff"} m="100px 0 0 0">
             <Text as="h3">
-              Our Projects
+              {title ? title : 'Our Projects'}
             </Text>
             <Text>
               See how we are touching lives one day at a time
