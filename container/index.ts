@@ -19,9 +19,7 @@ export { default as CareerHeroContainer } from "./CareerHeroContainer";
 export { default as SingleCareerContainer } from "./SingleCareerContainer";
 export { default as ReferformContainer } from "./ReferformContainer";
 export { default as ProjectsContainer } from "./ProjectsContainer";
-<<<<<<< HEAD
 export { default as ApplyHeroContainer } from "./ApplyHeroContainer";
-=======
 export{default as Hero} from "./ProjectHeroContainer"
 export {default as ProjectCard} from "./ProjectsContainer"
 export {default as ListProjects} from "./ProjectsContainer"
@@ -30,4 +28,3 @@ export {default as IkoroduDetails} from "./IkoroduContainer"
 export {default as MoreProjects} from "./MoreProjectsContainer"
 
 
->>>>>>> 969b3a4312ba4f5af6bdc74bbb190626e2615c32
