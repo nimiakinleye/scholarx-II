@@ -20,3 +20,4 @@ export { default as CareerHeroContainer } from "./CareerHeroContainer";
 export { default as SingleCareerContainer } from "./SingleCareerContainer";
 export { default as ReferformContainer } from "./ReferformContainer";
 export { default as ProjectsContainer } from "./ProjectsContainer";
+export { default as ApplyHeroContainer } from "./ApplyHeroContainer";

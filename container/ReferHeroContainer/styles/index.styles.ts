@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Screen } from "../../../theme/screens";
 import { Colors } from "../../../theme/colors";
 
-export const CareerHeroWrapper = styled.div`
+export const ReferHeroWrapper = styled.div`
   background-color: ${Colors.primary};
   background-size: cover;
   height: 80%;
@@ -22,16 +22,16 @@ export const CareerHeroWrapper = styled.div`
   }
 `;
 
-export const CareerHeroWrap = styled.div`
+export const ReferHeroWrap = styled.div`
   //background-color: #000055;
   background-position: center;
   background-size: cover;
   position: absolute;
-  width: 580px;
-  top: 100px;
-  bottom: 0px;
-  right: 3px;
-  //left: 0px;
+  width: 290px;
+  top: 400px;
+  //bottom: 0px;
+  right: 10px;
+  //left: 300px;
   @media (max-width: ${Screen.md}) {
     display: none;
   }

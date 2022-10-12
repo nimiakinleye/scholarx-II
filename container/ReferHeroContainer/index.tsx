@@ -4,14 +4,13 @@ import { HeaderContainer } from "..";
 import { Button, Container, Stack, Text } from "../../components";
 import { Dropdown, Search } from "../../components";
 import { Colors } from "../../theme/colors";
-import { CareerHeroWrapper, CareerHeroWrap } from "./styles/index.styles";
-//import laptopguy from "../../assets/images/holding_laptop.png";
+import { ReferHeroWrapper, ReferHeroWrap } from "./styles/index.styles";
+import holdinghands from "../../assets/images/hands-touching.png";
 
-
-export default function CareerHeroContainer() {
+export default function ReferHeroContainer() {
   return (
     <>
-      <CareerHeroWrapper>
+      <ReferHeroWrapper>
         <Container className="content">
           <Stack width="100%">
             <Stack m={"77px 0 0 0"}>
@@ -38,9 +37,12 @@ export default function CareerHeroContainer() {
                 </Stack>
               </Stack>
             </Stack>
+            <ReferHeroWrap>
+              <Image src={holdinghands} alt="laptop" />
+            </ReferHeroWrap>
           </Stack>
         </Container>
-      </CareerHeroWrapper>
+      </ReferHeroWrapper>
     </>
   );
 }

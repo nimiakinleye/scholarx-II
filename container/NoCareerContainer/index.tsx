@@ -27,9 +27,8 @@ export default function NoCareerContainer(){
                   lineHeight={"36px"}
                   color={Colors.gray_600}
                 >
-                  To be considered first for future roles, email your resume to
-                  scholarx@gmail.com
-                </Text>
+                  To be considered first for future roles, email your resume to scholarx@gmail.com
+                  </Text>
               </Stack>
               <Stack
                 alignItems="center"
