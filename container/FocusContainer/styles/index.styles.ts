@@ -9,6 +9,7 @@ export const FocusWrapper = styled.div`
 
 export const FocusCardWrapper = styled.div`
   width: 300px;
+  min-width:200px;
   height: 240px;
   padding: 32px;
   background: ${Colors.gray_100};
