@@ -14,7 +14,7 @@ const Projects: NextPage = () => {
         <meta name="description" content="about us page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero title={JSON.parse(JSON.stringify(id))}/>
+      <Hero title={JSON.parse(JSON.stringify(id ? id : ""))}/>
     </>
   )
 }
