@@ -9,11 +9,11 @@ export default function HeroContainer() {
     <HeroWrapper>
       <Overlay opacity={0.55} color="#000" />
       <Container className="content">
-        <Stack>
+        <Stack width="100%">
           <Stack m={"77px 0 0 0"}>
             <HeaderContainer />
           </Stack>
-          <Stack width='552px' gap="24px" color={"#fff"} m="100px 0 0 0">
+          <Stack maxWidth='552px' gap="24px" color={"#fff"} m="100px 0 0 0">
             <Text as="h3">
               <span>Creating endless paths to </span>
               <span className='heading'>Education</span>

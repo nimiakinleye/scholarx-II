@@ -15,7 +15,7 @@ export default function PressContainer() {
   })
   return (
     <PressWrapper data-aos="zoom-in-down" className="container">
-      <Text as="h1" color={Colors.primary}>What the press has to say about us</Text>
+      <Text as="h1" color={Colors.primary}>We have been featured on</Text>
       <Stack m="48px 0 0 0" sm_direction="column" direction="row" justifyContent="center" sm_gap="32px" gap="81px" alignItems="center">
         {mapImages}
       </Stack>

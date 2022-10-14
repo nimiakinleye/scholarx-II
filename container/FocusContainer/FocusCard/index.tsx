@@ -1,8 +1,24 @@
 import React from 'react'
-import { FocusCardWrapper } from '../styles/index.styles'
+import { FocusCardWrapper, IconWrapper } from '../styles/index.styles'
+import { Text } from "../../../components"
+import Image, { StaticImageData } from 'next/image'
 
-export default function FocusCard() {
+type Props = {
+  details: {
+    title: string;
+    content: string;
+    image: StaticImageData;
+  }
+}
+
+export default function FocusCard({ details }: Props) {
   return (
-    <FocusCardWrapper>FocusCard</FocusCardWrapper>
+    <FocusCardWrapper>
+      <IconWrapper>
+        <Image src={details.image}/>
+      </IconWrapper>
+      <Text as="h4">{details.title}</Text>
+      <Text as="p" size="16px" lineHeight='24px'>{details.content}</Text>
+    </FocusCardWrapper>
   )
 }

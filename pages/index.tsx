@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { FocusContainer, HeroContainer, PressContainer, StatisticsContainer } from '../container'
+import { FocusContainer, FooterContainer, HeroContainer, PressContainer, StatisticsContainer, SubscribeContainer, ProductsContainer, ProjectsContainer } from '../container'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -15,8 +15,11 @@ const Home: NextPage = () => {
       <HeroContainer />
       <StatisticsContainer />
       <FocusContainer />
+      <ProductsContainer />
+      <ProjectsContainer />
       <PressContainer />
-      
+      <SubscribeContainer />
+      <FooterContainer />
     </>
   )
 }

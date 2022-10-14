@@ -4,3 +4,5 @@ export { default as Overlay } from "./overlay";
 export { default as Stack } from "./stack";
 export { default as Text } from "./text";
 export { default as Button } from "./button";
+export { default as Search } from "./search";
+export { default as Dropdown } from "./dropdown";
