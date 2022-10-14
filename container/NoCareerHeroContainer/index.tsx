@@ -4,11 +4,14 @@ import { HeaderContainer } from "..";
 import { Button, Container, Stack, Text } from "../../components";
 import { Dropdown, Search } from "../../components";
 import { Colors } from "../../theme/colors";
-import { CareerHeroWrapper, CareerHeroWrap } from "./styles/index.styles";
-//import laptopguy from "../../assets/images/holding_laptop.png";
+import {
+  CareerHeroWrapper,
+  CareerHeroWrap,
+} from "../CareerHeroContainer/styles/index.styles";
+import laptopguy from "../../assets/images/holding_laptop.png";
 
 
-export default function CareerHeroContainer() {
+export default function NoCareerHeroContainer() {
   return (
     <>
       <CareerHeroWrapper>
@@ -38,6 +41,9 @@ export default function CareerHeroContainer() {
                 </Stack>
               </Stack>
             </Stack>
+            <CareerHeroWrap>
+              <Image src={laptopguy} alt="laptop" />
+            </CareerHeroWrap>
           </Stack>
         </Container>
       </CareerHeroWrapper>

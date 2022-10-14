@@ -4,11 +4,13 @@ import { HeaderContainer } from "..";
 import { Button, Container, Stack, Text } from "../../components";
 import { Dropdown, Search } from "../../components";
 import { Colors } from "../../theme/colors";
-import { CareerHeroWrapper, CareerHeroWrap } from "./styles/index.styles";
-//import laptopguy from "../../assets/images/holding_laptop.png";
+import {
+  CareerHeroWrapper,
+  CareerHeroWrap,
+} from "../CareerHeroContainer/styles/index.styles";
+import laptopguy from "../../assets/images/holding_laptop.png";
 
-
-export default function CareerHeroContainer() {
+export default function SingleCareerHeroContainer() {
   return (
     <>
       <CareerHeroWrapper>
@@ -23,8 +25,8 @@ export default function CareerHeroContainer() {
                   <span>Come join us today.</span>
                 </Text>
                 <Text fontweight="500" size="32px" lineHeight="48px">
-                  At ScholarX, the future is yours for the taking. Come help us
-                  empower youths across Africa.
+                  At ScholarX, we make sure that collaboration and teamwork are
+                  engraved in our hearts.
                 </Text>
                 <Stack
                   m="1.5rem 0 0 0"
@@ -38,6 +40,9 @@ export default function CareerHeroContainer() {
                 </Stack>
               </Stack>
             </Stack>
+            <CareerHeroWrap>
+              <Image src={laptopguy} alt="laptop" />
+            </CareerHeroWrap>
           </Stack>
         </Container>
       </CareerHeroWrapper>

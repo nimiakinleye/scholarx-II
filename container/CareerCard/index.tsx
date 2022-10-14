@@ -25,7 +25,7 @@ export default function CareerCard(){
               textalign={"center"}
               color={Colors.primary_blue}
             >
-              Frontend Developer
+              frontend developer
             </Text>
             <Stack
               height={"70px"}
@@ -68,7 +68,7 @@ export default function CareerCard(){
                 textalign="center"
                 color={Colors.neutral_gray100}
               >
-                Software Development
+                software development
               </Text>
             </Stack>
             <Stack alignItems="center">

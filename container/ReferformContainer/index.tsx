@@ -73,12 +73,15 @@ export default function ReferformContainer(){
       <>
         <Container className="content">
           <Stack width="100%">
-            <ReferformWrapper>
-              {formcomp}
-              <Stack alignItems={"center"} p={"1rem 0 3rem 0"}>
-                <Button>submit</Button>
-              </Stack>
-            </ReferformWrapper>
+            <ReferformWrapper>{formcomp}</ReferformWrapper>
+            <Stack
+              md_width={"100%"}
+              width={"55%"}
+              alignItems={"center"}
+              p={"1rem 0 3rem 0"}
+            >
+              <Button>submit</Button>
+            </Stack>
           </Stack>
         </Container>
       </>

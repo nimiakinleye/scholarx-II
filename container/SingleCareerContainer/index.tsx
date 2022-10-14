@@ -1,81 +1,136 @@
+import { useState, useEffect} from 'react';
 import { Container, Stack, Button, Text } from "../../components";
 import { Colors } from "../../theme/colors";
 import ShareIcon from "../../components/icons/ShareIcon";
-import { type } from "os";
+
 
 export default function SingleCareerContainer() {
-  const items = [
-    {
-      title: "About",
-      description: [
-        "  We are developing new functionality for an application – AI travel planner, that helps to organize trips and customize tourist’s itineraries while traveling across the world.   ",
-      ],
-    },
-    {
-      title: "Requirements",
-      description: [
-        "  3+ years of working experience in software engineering.   ",
-        "  Extensive experience developing iOS applications in Swift.    ",
-        "  Understanding of the full iOS mobile development life cycle.   ",
-        "  Intermediate Strong level of English, good communication skills.   ",
-      ],
-    },
-    {
-      title: "Responsibilities",
-      description: [
-        "  Develop solutions and algorithms according to technical specifications or other requirements documentation; use standard algorithms in the applicable cases; write program code according to the defined application architecture.   ",
-        "  Implement code refactoring and optimization methods.    ",
-        "  Post refactoring and optimization results to the collective knowledge base as the best practices.    ",
-        "  Develop, document, and edit programming interfaces, software modules and components assembling procedures, software deployment, and update procedures as well as data migration and transformation (conversion) procedures Work in pair with another developer, communication with team members sharing thoughts and knowledge New functionality design.   ",
-        "  Estimating tasks Communication with customer.   ",
-      ],
-    },
-    {
-      title: "What we Offer",
-      description: [
-        "Above average compensation and competitive Social package.   ",
-        "Close cooperation with a customer.   ",
-        "Challenging tasks.    ",
-        "  Competence development.   ",
-        "  Ability to influence project technologies.   ",
-        "  Team of professionals.    ",
-        "  Dynamic environment with low level of bureaucracy.   ",
-      ],
-    },
-  ];
 
-  /*for (const item of items) {
-      
-      if (typeof item.description !== "string") {
-        return console.log(item.description);
-      }else {
-  return description.map(item => <Text>item</Text>)
-}*/
+  const [data, setdata] = useState([]);
+  const url = `https://api.scholarx.co/api/v1/jobs/all?category=cloud&page=1&limit=5`;
 
-  const itemcomp = items.map(
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((result) => {
+        let resp = result.jobs;
+        setdata(resp);
+      });
+  }, []);
+
+
+   const req = data.map(
+     (
+       item: {
+         requirements: string[];
+       },
+       i
+     ) => {
+       return (
+         <>
+           <Stack key={i} p={"2rem 0 "} height={"auto"} color={Colors.gray_600}>
+             {item.requirements.map((f, i) => {
+               return (
+                 <Text key={i} size="20px">
+                   {f}
+                 </Text>
+               );
+             })}
+           </Stack>
+         </>
+       );
+     }
+   );
+
+  
+
+  const res = data.map(
     (
       item: {
-        title: string;
-        description: string[];
+        responsibilities: string[];
       },
       i
     ) => {
       return (
         <>
-          <Stack key={i} color={Colors.primary_blue}>
-            <Text size="32px" lineHeight="48px" fontweight="700">
-              {item.title}
-            </Text>
-          </Stack>
           <Stack key={i} p={"2rem 0 "} height={"auto"} color={Colors.gray_600}>
-            {item.description.map((f, i) => {
-              return <Text key={i} size="20px">{f}</Text>;
+            {item.responsibilities.map((f, i) => {
+              return (
+                <Text key={i} size="20px">
+                  {f}
+                </Text>
+              );
             })}
           </Stack>
         </>
       );
     }
   );
+
+
+  const wwo = data.map((
+      item: {
+        what_we_offer: string[];
+      },
+      i
+    ) => {
+    return (
+      <>
+          <Stack key={i} p={"2rem 0 "} height={"auto"} color={Colors.gray_600}>
+            {item.what_we_offer.map((f, i) => {
+              return (
+                <Text key={i} size="20px">
+                  {f}
+                </Text>
+              );
+            })}
+          </Stack>
+      </>
+    );
+  })
+
+   const abt = data.map((item: {
+        about: string;
+      }, i) => {
+       return (
+         <>
+             <Stack
+               key={i}
+               p={"2rem 0 "}
+               height={"auto"}
+               color={Colors.gray_600}
+             >
+                   <Text key={i} size="20px">
+                     {item.about}
+                   </Text>
+             </Stack>
+           </>
+       );
+       })
+      
+    const rol = data.map(
+      (
+        item: {
+          role: string;
+        },
+        i
+      ) => {
+        return (
+          <>
+            <Text
+              m={"16px 0"}
+              size={"32px"}
+              fontweight={"700"}
+              lineHeight={"48px"}
+              color={Colors.primary}
+            >
+              {item.role}
+            </Text>
+          </>
+        );
+      }
+    );
+
 
   return (
     <>
@@ -87,20 +142,45 @@ export default function SingleCareerContainer() {
             p={"18px 0"}
             direction="row"
           >
-            <Text
-              m={"16px 0"}
-              size={"32px"}
-              fontweight={"700"}
-              lineHeight={"48px"}
-              color={Colors.primary}
-            >
-              Frontend Developer
-            </Text>
+            <>
+              {rol}
+            </>
             <Button width={"auto"} height={"60px"}>
               Apply
             </Button>
           </Stack>
-          <>{itemcomp}</>
+          <>
+            <Stack color={Colors.primary_blue}>
+              <Text size="32px" lineHeight="48px" fontweight="700">
+                About
+              </Text>
+            </Stack>
+          </>
+          <>{abt}</>
+          <>
+            <Stack color={Colors.primary_blue}>
+              <Text size="32px" lineHeight="48px" fontweight="700">
+                Requirements
+              </Text>
+            </Stack>
+          </>
+          <>{req}</>
+          <>
+            <Stack color={Colors.primary_blue}>
+              <Text size="32px" lineHeight="48px" fontweight="700">
+                Responsibilities
+              </Text>
+            </Stack>
+          </>
+          <>{res}</>
+          <>
+            <Stack color={Colors.primary_blue}>
+              <Text size="32px" lineHeight="48px" fontweight="700">
+                What we Offer
+              </Text>
+            </Stack>
+          </>
+          <>{wwo}</>
 
           <Stack
             m={"30px 0 10px 0"}
@@ -112,7 +192,7 @@ export default function SingleCareerContainer() {
             justifyContent="space-between"
           >
             <Stack m="1rem 0">
-              <Button height={"60px"} width={"100px"}>
+              <Button height={"60px"} width={"auto"}>
                 Apply
               </Button>
             </Stack>

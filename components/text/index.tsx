@@ -11,9 +11,12 @@ export type TextOwnProps<E extends React.ElementType> = {
   textalign?: string;
   fontweight?: string;
   p?: string;
-  sm_size?:string;
-  sm_align?:string;
-  weight?:string;
+  sm_size?: string;
+  sm_align?: string;
+  weight?: string;
+  borderwidth?: string;
+  borderstyle?: string;
+  bordercolor?: string;
 };
   
 
@@ -30,6 +33,10 @@ export type TextPropsType = {
   sm_size?:string;
   sm_align?:string;
   weight?:string;
+  borderwidth?: string;
+  borderstyle?: string;
+  bordercolor?: string;
+
 };
 
 type TextProps<E extends React.ElementType> = TextOwnProps<E> & Omit<React.ComponentProps<E>, keyof TextOwnProps<E>>
