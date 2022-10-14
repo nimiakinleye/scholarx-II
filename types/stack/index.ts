@@ -1,6 +1,6 @@
 export type StackPropsType = {
-  children?: JSX.Element | JSX.Element[];
-
+  children?: JSX.Element | JSX.Element[] | string;
+  onClick?: () => void;
   width?: string;
   height?: string;
   minHeight?: string;
