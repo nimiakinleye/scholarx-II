@@ -14,7 +14,7 @@ export default function Header({color}:HeaderType) {
   return (
     <HeaderWrapper>
       <Link href='/'><a><Logo color={color}/></a></Link>
-      <Stack onClick={toggleShowNav}>
+      <Stack className='pointer' onClick={toggleShowNav}>
         {
           !showNav ? 
           <MenuIcon color={color}/>:

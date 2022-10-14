@@ -26,4 +26,8 @@ export const GlobalStyle = createGlobalStyle`
   .z-1 {
     z-index: 1;
   }
+
+  .pointer {
+    cursor: pointer;
+  }
 `;

@@ -32,6 +32,10 @@ export const NavWrapper = styled.div`
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
+
+    &:hover {
+      color: ${Colors.yellow};
+    }
   }
 
   @media (min-width: ${Screen.sm}) {
@@ -47,4 +51,5 @@ export const CancelIconWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: end;
+  cursor: pointer;
 `
