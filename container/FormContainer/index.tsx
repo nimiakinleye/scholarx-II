@@ -37,7 +37,7 @@ export default function Form() {
 <FormWrapper>
 <Stack p={"50px 20px 0"}>
       <form>
-        <Stack direction="row" md_direction="column" gap={"16px"}>
+        <Stack direction="row" md_direction="column" gap={"16px"} sm_gap={"0"}>
           <Stack>
             <label htmlFor="firstName">First Name</label>
             <input
