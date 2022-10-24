@@ -10,7 +10,7 @@ export default function Contact() {
       <Container >
         <Stack direction="row" m={"80px 0 0 0"} gap={"80px"} md_direction="column" p={"0 0 80px 0"}>
           <Stack className="contact-text">
-            <Text as="h4" weight={"700"} color={"#00001A"} p={"0 0 40px 0"} sm_align="center" size={"48px"} sm_size={"21px"}>Contact Us</Text>
+            <Text as="h4" weight={"700"} color={"#00001A"} p={"0 0 40px 0"} size={"48px"} sm_size={"21px"}>Contact Us</Text>
             <Text as="p" color={Colors.neutral} size={"18px"} p={"0 0 20px 0"}>
               We are located at 1 Akinwunmi street, Yaba, Lagos.
             </Text>

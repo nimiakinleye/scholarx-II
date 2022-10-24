@@ -12,7 +12,7 @@ export default function FoundingTeam(){
     return(
         <Container>
             <Stack m={"80px  0 0"}>
-                <Stack sm_alignItems="center">
+                <Stack>
                     <Text as="h4" color={Colors.primary} size={"48px"} sm_size={"21px"}>
                     Our Founding Team
                     </Text>
