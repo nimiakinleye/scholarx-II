@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import SingleCareerHeroContainer from "../../container/SingleCareerHeroContainer";
-import CareerContainer from "../../container/CareerContainer/index";
-import SingleCareerContainer from "../../container/SingleCareerContainer/index"
+import SingleCareerHeroContainer from "../../../container/SingleCareerHeroContainer";
+import CareerContainer from "../../../container/CareerContainer/index";
+import SingleCareerContainer from "../../../container/SingleCareerContainer/index"
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {

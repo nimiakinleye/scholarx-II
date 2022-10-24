@@ -19,12 +19,12 @@ export default function AboutHeader() {
           md_direction="column"
           gap={"51px"}
         >
-          <Stack className={"headerText"} width={"70%"} md_width={"100%"}>
+          <Stack data-aos="fade-up" className={"headerText"} width={"70%"} md_width={"100%"}>
             <Text
               as="h4"
               color={Colors.primary}
               weight={"700"}
-              sm_size={"21px"}
+              sm_align="center" sm_size={"21px"}
               size={"48px"}
             >
               About Us
@@ -37,7 +37,7 @@ export default function AboutHeader() {
               lineHeight={"36px"}
               p={"24px 0 0 0"}
             >
-              Founded in 2015, ScholarX is a social impact startup that focuses
+              Founded in 2016, ScholarX is a social impact startup that focuses
               on Educational Financing.
               We are committed to helping young
               Africans access quality education and skills through Scholarships,
@@ -46,9 +46,9 @@ export default function AboutHeader() {
               the funding gap for education.
             </Text>
           </Stack>
-
-          <Stack className={"HeaderImage"}>
-            <Image src={about} alt="some of the ScholarX team members" />
+          {/* m={"0 0 0 51px"}  width={"50%"} */}
+          <Stack data-aos="flip-up" className={"HeaderImage"}  >
+                <Image src={about} alt="some of the ScholarX team members"/>
           </Stack>
         </Stack>
       </Stack>

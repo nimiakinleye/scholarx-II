@@ -8,7 +8,7 @@ export const ContainerWrapper = styled.div<ContainerType>`
   flex-direction: column;
   align-items: ${({alignItems}) => alignItems ? alignItems : "center"};
   * {
-    max-width: 2000px;
+    max-width: 1500px;
   }
 
   @media(max-width: ${Screen.lg}) {

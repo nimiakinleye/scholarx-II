@@ -12,7 +12,7 @@ const Ikorodu: NextPage = () => {
       </Head>
     
       <IkoroduDetails />
-      <MoreProjects/>
+      {/* <MoreProjects/> */}
       <FooterContainer/>
       
     </>

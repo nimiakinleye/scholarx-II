@@ -18,7 +18,7 @@ export default function FoundingTeam(){
                     </Text>
                 </Stack>
                 <Stack className="founding-team-members" direction="row" gap={"22px"}  p={"40px 0 40px 0"} md_flexWrap="wrap" sm_alignItems="center" sm_justifyContent="center">
-                    <Stack>
+                    <Stack data-aos="flip-right">
                         <Image src={Bola} alt={"Bola Lawal's Picture"}/>
                         <Stack textAlign={"center"}>
                             <Text as="h4" size={"18px"}>
@@ -29,7 +29,7 @@ export default function FoundingTeam(){
                             </Text>
                         </Stack>
                     </Stack>
-                    <Stack>
+                    <Stack data-aos="flip-right">
                         <Image src={Dami} alt={"Damilola Emuze's Picture"}/>
                         <Stack textAlign={"center"}>
                             <Text as="h4" size={"18px"}>
@@ -40,7 +40,7 @@ export default function FoundingTeam(){
                             </Text>
                         </Stack>
                     </Stack>
-                    <Stack>
+                    <Stack data-aos="flip-right">
                         <Image src={Maxwell} alt={"Maxwell Ogunfuyi's Picture"}/>
                         <Stack textAlign={"center"}>
                             <Text as="h4" size={"18px"}>
@@ -51,7 +51,7 @@ export default function FoundingTeam(){
                             </Text>
                         </Stack>
                     </Stack>
-                    <Stack>
+                    <Stack data-aos="flip-right">
                         <Image src={Olabisi} alt={"Olabisi Kowobari's Picture"}/>
                         <Stack textAlign={"center"}>
                             <Text as="h4" size={"18px"}>

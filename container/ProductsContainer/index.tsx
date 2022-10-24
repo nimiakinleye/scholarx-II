@@ -11,12 +11,12 @@ export default function FocusContainer() {
     <ProductsWrapper>
       <Container>
         <Stack width="100%">
-          <Stack color={Colors.primary}>
+          <Stack data-aos="fade-up" color={Colors.primary}>
             <Text.Small>Our Products</Text.Small>
             <Text lineHeight="48px" as="h1">Our dreams have grown bigger with time.</Text>
           </Stack>
-          <Stack m="48px 0 0 0" direction="row" justifyContent='space-between' alignItems='center' md_direction='column' flexWrap='wrap'>
-            <Stack direction="column" width="350px" height="469px">
+          <Stack m="48px 0 0 0" direction="row" sm_justifyContent='center' justifyContent='space-between' alignItems='center' md_direction='column' flexWrap='wrap'>
+            <Stack direction="column" className='prod_image' width="400px" height="469px">
               <Image width="100%" height="100%" objectFit='cover' layout='responsive' src={PhoneMockup} />
             </Stack>
             <Stack maxWidth="517px" sm_textAlign='center'>
@@ -31,8 +31,8 @@ export default function FocusContainer() {
               </Stack>
             </Stack>
           </Stack>
-          <Stack m="48px 0 0 0" direction="row-reverse" justifyContent='space-between' alignItems='center' md_direction='column' flexWrap='wrap'>
-            <Stack direction="column" width="350px" height="350px">
+          <Stack m="48px 0 0 0" direction="row-reverse" sm_justifyContent='center' justifyContent='space-between' alignItems='center' md_direction='column' flexWrap='wrap'>
+            <Stack direction="column" className='prod_image' width="400px" height="500px">
               <Image width="100%" height="100%" objectFit='contain' layout='responsive' src={LaptopMockup} />
             </Stack>
             <Stack maxWidth="517px" sm_textAlign='center'>

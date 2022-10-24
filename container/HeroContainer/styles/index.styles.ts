@@ -14,9 +14,9 @@ export const HeroWrapper = styled.div`
   }
 
   .heading {
-    font-weight: 900 important!;
+    font-size: 64px;
+    font-weight: 900;
     line-height: 64px important!;
     letter-spacing: 0.01em important!;
-    text-align: left important!;
   }
 `;

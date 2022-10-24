@@ -7,3 +7,4 @@ export { default as MailIcon } from "./Mail";
 export { default as TwitterIcon } from "./Twitter";
 export { default as BuildingIcon } from "./Building";
 export { default as PhoneIcon } from "./Phone";
+export { default as ScrollDownIcon } from "./Scroll";

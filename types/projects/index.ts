@@ -3,6 +3,7 @@ export type ProjectListType = ProjectType[]
 export type ProjectType = {
   title:string;
   image: string;
+  id:string;
 }
 
 export type ProjectListProps = {

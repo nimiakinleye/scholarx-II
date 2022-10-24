@@ -18,7 +18,7 @@ export default function FocusContainer() {
     <FocusWrapper>
       <Container>
         <Stack>
-          <Stack color={Colors.primary} maxWidth='491px'>
+          <Stack data-aos="fade-up" color={Colors.primary} maxWidth='491px'>
             <Text.Small>What is our Focus?</Text.Small>
             <Text lineHeight="48px" as="h1">We are focused on imparting lifelong skills to Africans</Text>
           </Stack>

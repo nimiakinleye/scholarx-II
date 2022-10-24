@@ -6,7 +6,7 @@ import Form from "../FormContainer";
 
 export default function Contact() {
   return (
-    <ContactWrapper>
+    <ContactWrapper id="contact-us">
       <Container >
         <Stack direction="row" m={"80px 0 0 0"} gap={"80px"} md_direction="column" p={"0 0 80px 0"}>
           <Stack className="contact-text">

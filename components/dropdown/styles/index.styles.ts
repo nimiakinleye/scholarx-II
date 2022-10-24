@@ -5,7 +5,7 @@ export const CategoryWrapper = styled.div`
   border: 1px solid ${Colors.text_gray};
   display: flex;
   width: auto;
-  height: 40px;
+  height: 64px;
 
   select {
     background: transparent;
