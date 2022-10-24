@@ -31,6 +31,7 @@ export const CareerHeroWrap = styled.div`
   top: 100px;
   bottom: 0px;
   right: 3px;
+  display: flex;
   //left: 0px;
   @media (max-width: ${Screen.md}) {
     display: none;

@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 
-export const HeroWrapper = styled.div`
-background: url(/images/project-head.png);
+export const HeroWrapper = styled.div<{image?:string}>`
+background: ${({image}) => image ? `url(${image})` : `url(/images/project-head.png)`};
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 453px;
   // padding-top: 77px;
   position: relative;
 

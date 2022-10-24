@@ -8,12 +8,12 @@ export default function Team(){
     return(
         <Container>
             <Stack m={"80px 0 0 0"}>
-                <Stack>
+                <Stack data-aos="fade-up">
                     <Text as="h4" color={Colors.primary} weight={"700"} lineHeight={"64px"} sm_size={"21px"} size={"48px"} >
                     Our Amazing Team at Work
                     </Text>
                 </Stack>
-                <Stack p={"40px 0 0 0"}>
+                <Stack data-aos="fade-up" p={"40px 0 0 0"}>
                 <Image src={about} alt={"team members"}/>
                 </Stack>
             </Stack>

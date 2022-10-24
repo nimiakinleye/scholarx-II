@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../../theme/colors";
+import { Colors } from "../../../../theme/colors";
 
 export const ProjectWrapper = styled.div`
   //background: ${Colors.primary_blue_50};

@@ -15,7 +15,7 @@ export const SidebarWrapper = styled.div<SideBarProps>`
   z-index: 50;
   top: 0;
   right: 0;
-  width: ${({ show }) => (show ? "100%" : 0)};
+  width: ${({ show }) => (show ? "100vw" : 0)};
   height: ${({ show }) => (show ? "100%" : 0)};
   transition: 0.5s;
   background: rgba(0, 0, 0, 0.65);

@@ -18,13 +18,12 @@ export { default as CareerContainer } from "./CareerContainer";
 export { default as CareerHeroContainer } from "./CareerHeroContainer";
 export { default as SingleCareerContainer } from "./SingleCareerContainer";
 export { default as ReferformContainer } from "./ReferformContainer";
-export { default as ProjectsContainer } from "./ProjectsContainer";
+export { default as ProjectsContainer } from "./Projects/ProjectsContainer";
 export { default as ApplyHeroContainer } from "./ApplyHeroContainer";
-export{default as Hero} from "./ProjectHeroContainer"
-export {default as ProjectCard} from "./ProjectsContainer"
-export {default as ListProjects} from "./ProjectsContainer"
-export{default as ProjectsCards} from "./ProjectsCardContainer";
-export {default as IkoroduDetails} from "./IkoroduContainer"
-export {default as MoreProjects} from "./MoreProjectsContainer"
-
-
+export { default as Hero } from "./ProjectHeroContainer";
+export { default as ProjectCard } from "./Projects/ProjectsContainer";
+export { default as ListProjects } from "./Projects/ProjectsContainer";
+export { default as ProjectsCards } from "./Projects/ProjectsCardContainer";
+export { default as IkoroduDetails } from "./IkoroduContainer";
+export { default as MoreProjects } from "./MoreProjectsContainer";
+export { default as ViewProject } from "./Projects/ViewProject";

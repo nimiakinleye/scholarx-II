@@ -13,7 +13,7 @@ export default function SubscribeContainer() {
             </svg>
           </div>
           <Stack width="100%" justifyContent="space-between" gap="12px" sm_alignItems="center" direction="column">
-            <Text>Subscribe To Our Newsletter</Text>
+            <Text textalign="center">Subscribe To Our Newsletter</Text>
             <input placeholder="Enter your email" />
             <Stack direction="row" justifyContent="flex-start" sm_justifyContent="center">
               <Button width="auto">

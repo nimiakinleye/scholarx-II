@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import { Container, Stack, Text } from "../../components";
-import img1 from "../../assets/images/ikorodu-img1.png";
-import img2 from "../../assets/images/ikorodu-img2.png";
-import img3 from "../../assets/images/ikorodu-img3.png";
+// import img1 from "../../assets/images/ikorodu-img1.png";
+// import img2 from "../../assets/images/ikorodu-img2.png";
+// import img3 from "../../assets/images/ikorodu-img3.png";
 import { Wrapper } from "./styles/index.styles";
 import { Colors } from "../../theme/colors";
 
@@ -30,16 +30,16 @@ export default function IkoroduDetails() {
         </Stack>
         <Stack direction="row" gap="24px">
           <Stack>
-            <Image src={img1} alt="aerial view of Ikorodu" />
+            {/* <Image src={"../../assets/images/ikorodu-img1.png"} alt="aerial view of Ikorodu" /> */}
           </Stack>
           <Stack>
-            <Image
-              src={img2}
+            {/* <Image
+              src={"../../assets/images/ikorodu-img2.png"}
               alt="a ScholarX employee showing the app to a woman"
-            />
+            /> */}
           </Stack>
           <Stack>
-            <Image src={img3} alt="a ScholarX employee" />
+            {/* <Image src={"../../assets/images/ikorodu-img2.png"} alt="a ScholarX employee" /> */}
           </Stack>
         </Stack>
         <Stack p={"96px 0 0 0"}>

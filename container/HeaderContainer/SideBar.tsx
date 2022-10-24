@@ -7,7 +7,7 @@ import { CancelIconWrapper, NavWrapper, SidebarWrapper } from './styles/index.st
 export default function SideBar({ show, toggle }: { show: boolean; toggle: () => void }) {
   const links = [
     { title: "About us", link: "about-us" },
-    { title: "Contact us", link: "contact-us" },
+    { title: "Contact us", link: "about-us/#contact-us" },
     { title: "Projects", link: "project" },
     { title: "Careers", link: "careers" },
   ]

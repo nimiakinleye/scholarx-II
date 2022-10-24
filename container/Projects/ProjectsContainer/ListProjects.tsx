@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProjectListProps } from '../../types/projects'
+import { ProjectListProps } from '../../../types/projects'
 import ProjectCard from './ProjectCard'
 import { ListProjectsWrapper } from './styles/index.styles'
 

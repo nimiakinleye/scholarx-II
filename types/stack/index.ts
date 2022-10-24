@@ -48,4 +48,4 @@ export type StackPropsType = {
   bordercolor?: string;
   key?: number;
   md_justifyContent?:string;
-};
+}&any;
