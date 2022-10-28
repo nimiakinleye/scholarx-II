@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app'
 import "aos/dist/aos.css"
 import AOS from 'aos';
 import { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
 
@@ -18,6 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
+      <ToastContainer />
       <Component {...pageProps} />
     </>
   )

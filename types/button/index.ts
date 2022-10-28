@@ -8,4 +8,5 @@ export type ButtonPropsType = {
   hover?: string;
   text?: string;
   hover_text?: string;
+  disabled?: boolean;
 };

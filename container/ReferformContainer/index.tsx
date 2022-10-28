@@ -7,47 +7,67 @@ import Image from "next/image";
 import axios from "axios";
 import { ReferHeroWrap } from "../ReferHeroContainer/styles/index.styles";
 import holdinghands from "../../assets/images/hands-touching.png";
+import { referSchema } from "../../helpers/ValidationSchema";
+import { toast } from "react-toastify";
+
+const initialInput = {
+  refs_name: "",
+  your_email: "",
+  refs_position: "",
+  refs_email: "",
+  refs_linkedin: ""
+}
 
 export default function ReferformContainer() {
 
   const router = useRouter();
   const { id } = router.query;
-  const [refs_name, setname] = useState("");
-  const [your_email, setyouremail] = useState("");
-  const [refs_email, setemail] = useState("");
   const [resume, setresume] = useState<File | null>(null);
-  const [refs_linkedin, setlinkedinurl] = useState("");
-  const [refs_position, setposition] = useState("");
-  const data = {
-    refs_name,
-    your_email,
-    refs_position,
-    refs_email,
-    refs_linkedin,
-    resume
-  };
+  const [input, setInput] = useState({ ...initialInput })
+  const [loading, setLoading] = useState(false)
+
   const headers = {
     "Content-Type": "multipart/form-data"
   }
 
-  console.log(resume);
+  const handleChange = (e: any) => {
+    setInput({ ...input, [e.target.name]: e.target.value })
+  }
+
   const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-
-    if (id) {
-      axios
-        .post(
-          `https://api.scholarx.co/api/v1/referrals/submit/${id}`,
-          data, { headers: headers }
-        )
-        .then((res) => {
-          console.log(res);
-          router.push("/careers");
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
+    referSchema().validate(input)
+      .then(() => {
+        if (!resume) {
+          return toast.error('You must upload a resume')
+        }
+        else {
+          setLoading(true)
+          if (id) {
+            const form = document.getElementById('refer_form')?.getElementsByTagName('form')[0]
+            const fd = new FormData(form!)
+            axios
+              .post(
+                `https://api.scholarx.co/api/v1/referrals/submit/${id}`,
+                fd, { headers: headers }
+              )
+              .then((res) => {
+                const { msg } = res.data
+                toast.success(msg)
+                setLoading(false)
+                // router.push("/careers");
+              })
+              .catch((err) => {
+                setLoading(false)
+                const { data } = err.response
+                toast.error(data)
+              });
+          }
+        }
+      })
+      .catch(err => {
+        return toast.error(err.message)
+      })
   }
 
   return (
@@ -55,7 +75,7 @@ export default function ReferformContainer() {
       <Container className="content">
         <Stack width="100%" direction="row" justifyContent="space-between">
           <Stack maxWidth="584px" width="100%" sm_alignItems="center" p="8px">
-            <ReferformWrapper>
+            <ReferformWrapper id="refer_form">
               <form>
                 <Stack p="2px" width="100%">
                   <label htmlFor="name">Your friend’s name</label>
@@ -64,8 +84,9 @@ export default function ReferformContainer() {
                     required
                     placeholder="E.g  Bowale Adeniran"
                     type="text"
-                    name="name"
-                    onChange={(e) => setname(e.target.value)}
+                    name="refs_name"
+                    onChange={handleChange}
+                    value={input.refs_name}
                   />
                   <br />
                 </Stack>
@@ -75,9 +96,10 @@ export default function ReferformContainer() {
                   <input
                     required
                     placeholder="E.g adewale@gmail.com"
-                    type="text"
-                    name="Email"
-                    onChange={(e) => setyouremail(e.target.value)}
+                    type="email"
+                    name="your_email"
+                    onChange={handleChange}
+                    value={input.your_email}
                   />
                   <br />
                 </Stack>
@@ -91,8 +113,9 @@ export default function ReferformContainer() {
                     placeholder="E.g
                     FrontEnd Developer"
                     type="text"
-                    name="position"
-                    onChange={(e) => setposition(e.target.value)}
+                    name="refs_position"
+                    onChange={handleChange}
+                    value={input.refs_position}
                   />
                   <br />
                 </Stack>
@@ -103,9 +126,10 @@ export default function ReferformContainer() {
                     required
                     placeholder="E.g
                     adewale@gmail.com"
-                    type="text"
-                    name="Email"
-                    onChange={(e) => setemail(e.target.value)}
+                    type="email"
+                    name="refs_email"
+                    onChange={handleChange}
+                    value={input.refs_email}
                   />
                   <br />
                 </Stack>
@@ -117,8 +141,9 @@ export default function ReferformContainer() {
                     placeholder="Copy URL to
                     this place"
                     type="text"
-                    name="url"
-                    onChange={(e) => setlinkedinurl(e.target.value)}
+                    name="refs_linkedin"
+                    onChange={handleChange}
+                    value={input.refs_linkedin}
                   />
                   <br />
                 </Stack>
@@ -131,6 +156,7 @@ export default function ReferformContainer() {
                     type="file"
                     name="resume"
                     onChange={(e) => { if (e.target.files != null) { setresume(e.target.files[0]) } }}
+                    accept=".doc,.docx,.pdf"
                   />
                   <br />
                 </Stack>
@@ -141,7 +167,7 @@ export default function ReferformContainer() {
               alignItems={"center"}
               p={"1rem 0 3rem 0"}
             >
-              <Button onClick={handleSubmit}>submit</Button>
+              <Button loading={loading} onClick={handleSubmit}>submit</Button>
             </Stack>
           </Stack>
           <ReferHeroWrap>

@@ -1,8 +1,24 @@
 import React from 'react'
+import Loader from '../loader'
 import { ButtonWrapper } from './styles/index.styles'
 
-export default function Button({ ...resProps }) {
+type Props = {
+  children: any;
+  loading?: boolean;
+  onClick?: any;
+  onMouseOver?: any;
+  onMouseOut?: any;
+  onMouseLeave?: any;
+  width?: string;
+  color?: string;
+}
+
+export default function Button({ loading, children, ...resProps }:Props) {
   return (
-    <ButtonWrapper {...resProps}>{resProps.children}</ButtonWrapper>
+    <ButtonWrapper disabled={loading} {...resProps}>
+      {
+        loading ? <Loader /> : children
+      }
+    </ButtonWrapper>
   )
 }

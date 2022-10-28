@@ -7,49 +7,74 @@ import { ReferformWrapper } from "../ReferformContainer/styles/index.styles";
 import Image from "next/image";
 import { ReferHeroWrap } from "../ReferHeroContainer/styles/index.styles";
 import holdinghands from "../../assets/images/hands-touching.png";
+import { toast } from "react-toastify";
+import { applySchema } from "../../helpers/ValidationSchema";
+
+const initialInput = {
+  name: "",
+  email: "",
+  linkedin: "",
+}
 
 export default function ApplyformContainer() {
   const router = useRouter();
   const { id } = router.query;
-  const [name, setname] = useState("");
-  const [email, setemail] = useState("");
   const [resume, setresume] = useState<File | null>(null);
-  const [linkedin, setlinkedin] = useState("");
   const [cover_letter, setcover] = useState<File | null>(null);
-
-  const data = {
-    name,
-    email,
-    resume,
-    linkedin,
-    cover_letter,
-  };
+  const [input, setInput] = useState({ ...initialInput })
+  const [loading, setLoading] = useState(false)
 
   const headers = {
     "Content-Type": "multipart/form-data",
   };
 
-  console.log(resume);
+  const handleChange = (e: any) => {
+    setInput({ ...input, [e.target.name]: e.target.value })
+  }
+
+  const acceptedFiles = ".doc,.docx,.pdf"
+
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-
-    if (id) {
-      axios
-        .post(
-          `https://api.scholarx.co/api/v1/applications/submit/${id}`,
-          data,
-          {
-            headers: headers,
+    applySchema().validate(input)
+      .then(() => {
+        if (!resume) {
+          return toast.error('You must upload a resume')
+        }
+        else if (!cover_letter) {
+          return toast.error('You must upload a cover letter')
+        }
+        else {
+          setLoading(true)
+          if (id) {
+            const form = document.getElementById('apply_form')?.getElementsByTagName('form')[0]
+            const fd = new FormData(form!)
+            axios
+              .post(
+                `https://api.scholarx.co/api/v1/applications/submit/${id}`,
+                fd,
+                {
+                  headers: headers,
+                }
+              )
+              .then((res) => {
+                setLoading(false)
+                const { msg } = res.data
+                toast.success(msg)
+                router.push('/careers')
+              })
+              .catch((err) => {
+                setLoading(false)
+                console.log(err);
+                const { data } = err.response
+                toast.error(data)
+              });
           }
-        )
-        .then((res) => {
-          console.log(res);
-          router.push('/careers')
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
+        }
+      })
+      .catch(err => {
+        return toast.error(err.message)
+      })
   };
 
   return (
@@ -57,17 +82,18 @@ export default function ApplyformContainer() {
       <Container className="content">
         <Stack width="100%" direction="row" justifyContent="space-between">
           <Stack maxWidth="584px" width="100%" sm_alignItems="center" p="8px">
-            <ReferformWrapper>
-              <form>
+            <ReferformWrapper id="apply_form">
+              <form onSubmit={handleSubmit}>
                 <Stack p="2px" width="100%">
                   <label>Name</label>
                   <br />
                   <input
-                    onChange={(e) => setname(e.target.value)}
+                    onChange={handleChange}
                     required
                     placeholder="E.g Bowale Adeniran"
                     type="text"
                     name="name"
+                    value={input.name}
                   />
                   <br />
                 </Stack>
@@ -76,10 +102,11 @@ export default function ApplyformContainer() {
                   <br />
                   <input
                     required
-                    onChange={(e) => setemail(e.target.value)}
+                    onChange={handleChange}
                     placeholder="E.g adewale@gmail.com"
                     type="text"
-                    name="E.g adewale@gmail.com"
+                    name="email"
+                    value={input.email}
                   />
                   <br />
                 </Stack>
@@ -88,11 +115,11 @@ export default function ApplyformContainer() {
                   <br />
                   <input
                     required
-                    onChange={(e) => setlinkedin(e.target.value)}
-                    placeholder="Input text
-                  here"
+                    onChange={handleChange}
+                    placeholder="Input text here"
                     type="text"
-                    name="Email"
+                    name="linkedin"
+                    value={input.linkedin}
                   />
                   <br />
                 </Stack>
@@ -109,6 +136,7 @@ export default function ApplyformContainer() {
                     placeholder="Upload files here"
                     type="file"
                     name="resume"
+                    accept={acceptedFiles}
                   />
                   <br />
                 </Stack>
@@ -124,6 +152,7 @@ export default function ApplyformContainer() {
                     }}
                     placeholder="Upload files here"
                     type="file"
+                    accept={acceptedFiles}
                     name="cover_letter"
                   />
                   <br />
@@ -135,7 +164,7 @@ export default function ApplyformContainer() {
               alignItems={"center"}
               p={"1rem 0 3rem 0"}
             >
-              <Button onClick={handleSubmit}>submit</Button>
+              <Button loading={loading} onClick={handleSubmit}>submit</Button>
             </Stack>
           </Stack>
           <ReferHeroWrap>
