@@ -3,10 +3,11 @@ import { Stack, Text, Button } from "../../components";
 import { Colors } from "../../theme/colors";
 import ShareIcon from "../../components/icons/ShareIcon";
 import { Container } from "../../components";
-import careercard from "../../assets/images/CareerContact.png"
 import Image from "next/image";
 import axios from "axios";
 import Link from "next/link";
+import { CareerFooter } from "./styles/index.styles";
+
 //import { InferGetServerSidePropsType, GetServerSideProps } from 'next'
 
 
@@ -43,101 +44,167 @@ export default function CareerContainer() {
             </Text>
           </Stack>
 
-          <Stack sm_width={"100%"} direction="row" sm_justifyContent="center" justifyContent="space-between" flexWrap="wrap" >
+          <Stack
+            sm_width={"100%"}
+            direction="row"
+            sm_justifyContent="center"
+            justifyContent="space-between"
+            flexWrap="wrap"
+          >
             <>
-              {data.map((job: { role: string | number | JSX.Element | JSX.Element[]; _id: string; category: string | number | JSX.Element | JSX.Element[]; }, i: number | undefined) => {
-                return (
-                  <Stack
-                    key={i}
-                    width={"305px"}
-                    m={"20px 10px"}
-                    p={"18px"}
-                    bordercolor={Colors.primary_blue}
-                    borderstyle={"solid"}
-                    borderwidth={"1px"}
-                    height={"300px"}
-                  >
-                    <Text
-                      m={"12px 0 0 0"}
-                      size={"32px"}
-                      fontweight={"700"}
-                      textalign={"center"}
-                      color={Colors.primary_blue}
-                    >
-                      {job.role}
-                    </Text>
+              {data.map(
+                (
+                  job: {
+                    role: string | number | JSX.Element | JSX.Element[];
+                    _id: string;
+                    category: string | number | JSX.Element | JSX.Element[];
+                  },
+                  i: number | undefined
+                ) => {
+                  return (
                     <Stack
-                      height={"70px"}
-                      p={"0 0 16px 0"}
-                      borderwidth={"0 0 1px 0"}
-                      bordercolor={Colors.neutral_gray100}
+                      key={i}
+                      width={"305px"}
+                      m={"20px 10px"}
+                      p={"18px"}
+                      bordercolor={Colors.primary_blue}
                       borderstyle={"solid"}
-                      direction="row"
-                      alignItems={"center"}
-                      justifyContent={"space-between"}
+                      borderwidth={"1px"}
+                      height={"300px"}
                     >
-                      <Stack
-                        m={"15px 0 0 0"}
-                        borderwidth={"0 0 1px 0"}
-                        bordercolor={Colors.yellow}
-                        borderstyle={"solid"}
-                        width={"38%"}
+                      <Text
+                        m={"12px 0 0 0"}
+                        size={"32px"}
+                        fontweight={"700"}
+                        textalign={"center"}
+                        color={Colors.primary_blue}
                       >
-                        <Link href={`/refer/${job?._id}`}>
+                        {job.role}
+                      </Text>
+                      <Stack
+                        height={"70px"}
+                        p={"0 0 16px 0"}
+                        borderwidth={"0 0 1px 0"}
+                        bordercolor={Colors.neutral_gray100}
+                        borderstyle={"solid"}
+                        direction="row"
+                        alignItems={"center"}
+                        justifyContent={"space-between"}
+                      >
+                        <Stack
+                          m={"15px 0 0 0"}
+                          borderwidth={"0 0 1px 0"}
+                          bordercolor={Colors.yellow}
+                          borderstyle={"solid"}
+                          width={"38%"}
+                        >
+                          <Link href={`/refer/${job?._id}`}>
+                            <a>
+                              <Text
+                                textalign="center"
+                                size={"18px"}
+                                color={Colors.yellow}
+                              >
+                                Refer a friend
+                              </Text>
+                            </a>
+                          </Link>
+                        </Stack>
+
+                        <Stack
+                          width="35%"
+                          m={"12px 0 0 0"}
+                          direction="row"
+                          justifyContent="center"
+                          alignItems={"center"}
+                        >
+                          <ShareIcon color={Colors.neutral_gray100} />
+                          <Text
+                            size={"18px"}
+                            m={"0 0 0 8px"}
+                            color={Colors.neutral_gray100}
+                          >
+                            Share
+                          </Text>
+                        </Stack>
+                      </Stack>
+                      <Stack m={"18px 0 0 0"} height={"50px"}>
+                        <Text
+                          size={"18px"}
+                          textalign="center"
+                          color={Colors.neutral_gray100}
+                        >
+                          {job.category}
+                        </Text>
+                      </Stack>
+                      <Stack alignItems="center">
+                        <Link href={`/careers/${job?._id}`}>
                           <a>
-                            <Text
-                              textalign="center"
-                              size={"18px"}
-                              color={Colors.yellow}
-                            >
-                              Refer a friend
-                            </Text>
+                            <Button size={"16px"} width={"auto"}>
+                              Apply
+                            </Button>
                           </a>
                         </Link>
                       </Stack>
-
-                      <Stack
-                        width="35%"
-                        m={"12px 0 0 0"}
-                        direction="row"
-                        justifyContent="center"
-                        alignItems={"center"}
-                      >
-                        <ShareIcon color={Colors.neutral_gray100} />
-                        <Text
-                          size={"18px"}
-                          m={"0 0 0 8px"}
-                          color={Colors.neutral_gray100}
-                        >
-                          Share
-                        </Text>
-                      </Stack>
                     </Stack>
-                    <Stack m={"18px 0 0 0"} height={"50px"}>
-                      <Text
-                        size={"18px"}
-                        textalign="center"
-                        color={Colors.neutral_gray100}
-                      >
-                        {job.category}
-                      </Text>
-                    </Stack>
-                    <Stack alignItems="center">
-                      <Link href={`/careers/${job?._id}`}>
-                        <a>
-                          <Button size={"16px"} width={"auto"}>
-                            Apply
-                          </Button>
-                        </a>
-                      </Link>
-                    </Stack>
-                  </Stack>
-                );
-              })}
+                  );
+                }
+              )}
             </>
           </Stack>
           <Stack p={"2rem 0 0 0"} m={"0 0 20px 0"} width="85%">
-            <Image src={careercard}></Image>
+            <CareerFooter>
+              <Stack
+              flexWrap={"wrap"}
+                height={"50vh"}
+                m={"auto"}
+                direction={"column"}
+                justifyContent={"center"}
+              >
+                <Text
+                  weight={"700"}
+                  color={Colors.white}
+                  size={"32px"}
+                  lineHeight={"48px"}
+                  m={"0 0 1.5rem 0"}
+                  textalign={"center"}
+                >
+                  Did not find your role?
+                </Text>
+                <Text
+                  weight={"700"}
+                  size={"20px"}
+                  lineHeight={"32px"}
+                  color={Colors.yellow}
+                  textalign={"center"}
+                >
+                  Don’t worry. Email your resume to
+                </Text>
+                <Link onClick={() => window.location.href = 'mailto:info@scholarx.co'}
+                href={""}>
+                  <a>
+                    <Text
+                      weight={"700"}
+                      size={"20px"}
+                      lineHeight={"32px"}
+                      color={Colors.yellow}
+                      textalign={"center"}
+                    >
+                      <a href="" onClick={() => window.location.href = 'mailto:info@scholarx.co'}>info@scholarx.co</a>
+                    </Text>
+                  </a>
+                </Link>
+                <Text
+                  weight={"700"}
+                  size={"20px"}
+                  lineHeight={"32px"}
+                  color={Colors.yellow}
+                  textalign={"center"}
+                >
+                  to be considered for future openings.
+                </Text>
+              </Stack>
+            </CareerFooter>
           </Stack>
         </>
       </Container>
