@@ -65,7 +65,6 @@ export default function ApplyformContainer() {
               })
               .catch((err) => {
                 setLoading(false)
-                console.log(err);
                 const { data } = err.response
                 toast.error(data)
               });
