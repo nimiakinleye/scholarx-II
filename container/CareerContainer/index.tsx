@@ -83,13 +83,17 @@ export default function CareerContainer() {
                         borderstyle={"solid"}
                         width={"38%"}
                       >
-                        <Text
-                          textalign="center"
-                          size={"18px"}
-                          color={Colors.yellow}
-                        >
-                          Refer a friend
-                        </Text>
+                        <Link href={`/refer/${job?._id}`}>
+                          <a>
+                            <Text
+                              textalign="center"
+                              size={"18px"}
+                              color={Colors.yellow}
+                            >
+                              Refer a friend
+                            </Text>
+                          </a>
+                        </Link>
                       </Stack>
 
                       <Stack
@@ -118,7 +122,7 @@ export default function CareerContainer() {
                         {job.category}
                       </Text>
                     </Stack>
-                    <Stack alignItems="center" >
+                    <Stack alignItems="center">
                       <Link href={`/careers/${job?._id}`}>
                         <a>
                           <Button size={"16px"} width={"auto"}>
@@ -127,7 +131,8 @@ export default function CareerContainer() {
                         </a>
                       </Link>
                     </Stack>
-                  </Stack>)
+                  </Stack>
+                );
               })}
             </>
           </Stack>

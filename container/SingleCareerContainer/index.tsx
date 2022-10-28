@@ -4,6 +4,7 @@ import { Colors } from "../../theme/colors";
 import ShareIcon from "../../components/icons/ShareIcon";
 import { useRouter } from 'next/router';
 import axios from 'axios';
+import Link from "next/link";
 
 
 export default function SingleCareerContainer() {
@@ -120,12 +121,14 @@ export default function SingleCareerContainer() {
             p={"18px 0"}
             direction="row"
           >
-            <>
-              {rol()}
-            </>
-            <Button width={"auto"} height={"60px"}>
-              Apply
-            </Button>
+            <>{rol()}</>
+            <Link href={`/Apply/${id}`}>
+              <a>
+                <Button height={"60px"} width={"auto"}>
+                  Apply
+                </Button>
+              </a>
+            </Link>
           </Stack>
           <Stack m="16px 0">
             <Stack color={Colors.primary_blue}>
@@ -160,7 +163,6 @@ export default function SingleCareerContainer() {
             {wwo()}
           </Stack>
 
-
           <Stack
             m={"30px 0 10px 0"}
             alignItems="center"
@@ -171,9 +173,13 @@ export default function SingleCareerContainer() {
             justifyContent="space-between"
           >
             <Stack m="1rem 0">
-              <Button height={"60px"} width={"auto"}>
-                Apply
-              </Button>
+              <Link href={`/Apply/${id}`}>
+                <a>
+                  <Button height={"60px"} width={"auto"}>
+                    Apply
+                  </Button>
+                </a>
+              </Link>
             </Stack>
             <Stack
               bordercolor={Colors.primary_blue}
