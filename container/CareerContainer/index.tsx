@@ -155,7 +155,7 @@ export default function CareerContainer() {
           <Stack p={"2rem 0 0 0"} m={"0 0 20px 0"} width="85%">
             <CareerFooter>
               <Stack
-              flexWrap={"wrap"}
+                flexWrap={"wrap"}
                 height={"50vh"}
                 m={"auto"}
                 direction={"column"}
@@ -180,8 +180,12 @@ export default function CareerContainer() {
                 >
                   Don’t worry. Email your resume to
                 </Text>
-                <Link onClick={() => window.location.href = 'mailto:info@scholarx.co'}
-                href={""}>
+                <Link
+                  onClick={() =>
+                    (window.location.href = "mailto:info@scholarx.co")
+                  }
+                  href={""}
+                >
                   <a>
                     <Text
                       weight={"700"}
@@ -190,7 +194,14 @@ export default function CareerContainer() {
                       color={Colors.yellow}
                       textalign={"center"}
                     >
-                      <a href="" onClick={() => window.location.href = 'mailto:info@scholarx.co'}>info@scholarx.co</a>
+                      <a
+                        href=""
+                        onClick={() =>
+                          (window.location.href = "mailto:info@scholarx.co")
+                        }
+                      >
+                        info@scholarx.co
+                      </a>
                     </Text>
                   </a>
                 </Link>
