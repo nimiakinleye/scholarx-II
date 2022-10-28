@@ -1,56 +1,60 @@
 import React from "react";
 import { Button, Container, Stack } from "../../components";
-import {ReferformWrapper} from "./styles/index.styles";
-import { useState} from "react";
+import { ReferformWrapper } from "./styles/index.styles";
+import { useState } from "react";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import axios from "axios";
+import { ReferHeroWrap } from "../ReferHeroContainer/styles/index.styles";
+import holdinghands from "../../assets/images/hands-touching.png";
 
-export default function ReferformContainer(){
-    
-    const router = useRouter();
-    const { id } = router.query;
-    const [refs_name, setname] = useState("");
-    const [your_email, setyouremail] = useState("");
-    const [refs_email, setemail] = useState("");
-    const [resume, setresume] = useState<File| null>(null);
-    const [refs_linkedin, setlinkedinurl] = useState("");
-    const [refs_position, setposition] = useState("");
-    const data = {
-      refs_name,
-      your_email,
-      refs_position,
-      refs_email,
-      refs_linkedin,
-      resume
-    };
-    const headers = {
-      "Content-Type": "multipart/form-data"
-    }
+export default function ReferformContainer() {
 
-    console.log(resume);
-    const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const router = useRouter();
+  const { id } = router.query;
+  const [refs_name, setname] = useState("");
+  const [your_email, setyouremail] = useState("");
+  const [refs_email, setemail] = useState("");
+  const [resume, setresume] = useState<File | null>(null);
+  const [refs_linkedin, setlinkedinurl] = useState("");
+  const [refs_position, setposition] = useState("");
+  const data = {
+    refs_name,
+    your_email,
+    refs_position,
+    refs_email,
+    refs_linkedin,
+    resume
+  };
+  const headers = {
+    "Content-Type": "multipart/form-data"
+  }
+
+  console.log(resume);
+  const handleSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    
-        if (id) {
-          axios
-            .post(
-              `https://api.scholarx.co/api/v1/referrals/submit/${id}`,
-              data, {headers: headers}
-            )
-            .then((res) => {
-              console.log(res);
-              router.push("/careers");
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        }
-    }
 
-    return (
-      <>
-        <Container className="content">
-          <Stack width="100%">
+    if (id) {
+      axios
+        .post(
+          `https://api.scholarx.co/api/v1/referrals/submit/${id}`,
+          data, { headers: headers }
+        )
+        .then((res) => {
+          console.log(res);
+          router.push("/careers");
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  }
+
+  return (
+    <>
+      <Container className="content">
+        <Stack width="100%" direction="row" justifyContent="space-between">
+          <Stack maxWidth="584px" width="100%" sm_alignItems="center" p="8px">
             <ReferformWrapper>
               <form>
                 <Stack p="2px" width="100%">
@@ -122,26 +126,29 @@ export default function ReferformContainer(){
                   <label htmlFor="resume">Your friend's CV</label>
                   <br />
                   <input
-                  required
+                    required
                     placeholder="Upload files here"
                     type="file"
                     name="resume"
-                    onChange={(e) => {if (e.target.files != null) {setresume(e.target.files[0])}}}
+                    onChange={(e) => { if (e.target.files != null) { setresume(e.target.files[0]) } }}
                   />
                   <br />
                 </Stack>
               </form>
             </ReferformWrapper>
             <Stack
-              md_width={"100%"}
-              width={"55%"}
+              width={"100%"}
               alignItems={"center"}
               p={"1rem 0 3rem 0"}
             >
               <Button onClick={handleSubmit}>submit</Button>
             </Stack>
           </Stack>
-        </Container>
-      </>
-    );
+          <ReferHeroWrap>
+            <Image src={holdinghands} alt="laptop" />
+          </ReferHeroWrap>
+        </Stack>
+      </Container>
+    </>
+  );
 }

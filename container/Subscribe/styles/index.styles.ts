@@ -7,8 +7,8 @@ export const SubscribeWrapper = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 318px;
-  background: url(/images/testimonies_bg.png);
-  background: #ccc;
+  background: url(/images/subscribe_bg.png);
+  // background: #ccc;
   background-position: center;
   background-size: cover;
   padding: 40px;

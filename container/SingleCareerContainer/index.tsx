@@ -124,7 +124,7 @@ export default function SingleCareerContainer() {
             <>{rol()}</>
             <Link href={`/Apply/${id}`}>
               <a>
-                <Button height={"60px"} width={"auto"}>
+                <Button width={"auto"}>
                   Apply
                 </Button>
               </a>
@@ -175,7 +175,7 @@ export default function SingleCareerContainer() {
             <Stack m="1rem 0">
               <Link href={`/Apply/${id}`}>
                 <a>
-                  <Button height={"60px"} width={"auto"}>
+                  <Button width={"auto"}>
                     Apply
                   </Button>
                 </a>
@@ -186,10 +186,9 @@ export default function SingleCareerContainer() {
               borderstyle={"solid"}
               borderwidth={"1px"}
               width={"100px"}
-              height={"60px"}
             >
-              <Button height={"60px"} width={"auto"} color={Colors.white}>
-                <Stack alignItems="center" width="100%" direction={"row"}>
+              <Button width={"auto"} color={Colors.white}>
+                <Stack alignItems="center" direction={"row"}>
                   <ShareIcon color={Colors.primary_blue} />
                   <Text
                     m="0 0 5px 7px"
