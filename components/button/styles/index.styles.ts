@@ -23,7 +23,8 @@ export const ButtonWrapper = styled.button<ButtonPropsType>`
     stroke ? Colors.primary : text ? text : Colors.white};
   font-size: ${({ size }) => (size === "large" ? "24px" : "18px")};
   font-family: "Mulish", sans-serif;
-  cursor: pointer;
+  cursor: ${({disabled}) => disabled ? 'not-allowed' : "pointer"};
+  opacity: ${({disabled}) => disabled ? '0.6' : ""};
 
   &:hover {
     background-color: ${({ hover }) => (hover ? hover : Colors.yellow)};

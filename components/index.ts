@@ -6,3 +6,4 @@ export { default as Text } from "./text";
 export { default as Button } from "./button";
 export { default as Search } from "./search";
 export { default as Dropdown } from "./dropdown";
+export { default as Loader } from "./loader";

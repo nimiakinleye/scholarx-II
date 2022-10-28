@@ -6,6 +6,9 @@ export const ContainerWrapper = styled.div<ContainerType>`
   padding: 0 130px;
   display: flex;
   flex-direction: column;
+  a{
+    text-decoration: none;
+  }
   align-items: ${({alignItems}) => alignItems ? alignItems : "center"};
   * {
     max-width: 1500px;

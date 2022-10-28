@@ -26,13 +26,10 @@ export const ReferHeroWrap = styled.div`
   //background-color: #000055;
   background-position: center;
   background-size: cover;
-  position: absolute;
-  width: 290px;
-  top: 400px;
-  //bottom: 0px;
-  right: 10px;
-  //left: 300px;
-  @media (max-width: ${Screen.md}) {
+  margin-top: -40px;
+  width: 258px;
+  height: 378px;
+  @media (max-width: ${Screen.lg}) {
     display: none;
   }
   @media (max-width: ${Screen.lg}) {

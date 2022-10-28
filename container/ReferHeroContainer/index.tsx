@@ -1,11 +1,9 @@
 import React from "react";
-import Image from "next/image";
 import { HeaderContainer } from "..";
-import { Button, Container, Stack, Text } from "../../components";
+import { Container, Stack, Text } from "../../components";
 import { Dropdown, Search } from "../../components";
 import { Colors } from "../../theme/colors";
-import { ReferHeroWrapper, ReferHeroWrap } from "./styles/index.styles";
-import holdinghands from "../../assets/images/hands-touching.png";
+import { ReferHeroWrapper } from "./styles/index.styles";
 
 export default function ReferHeroContainer() {
   return (
@@ -30,16 +28,9 @@ export default function ReferHeroContainer() {
                   direction="row"
                   justifyContent={"space-between"}
                 >
-                  <Stack direction="row" sm_direction="column" gap="16px">
-                    <Search />
-                    <Dropdown />
-                  </Stack>
                 </Stack>
               </Stack>
             </Stack>
-            <ReferHeroWrap>
-              <Image src={holdinghands} alt="laptop" />
-            </ReferHeroWrap>
           </Stack>
         </Container>
       </ReferHeroWrapper>
