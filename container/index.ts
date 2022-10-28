@@ -27,3 +27,4 @@ export { default as ProjectsCards } from "./Projects/ProjectsCardContainer";
 export { default as IkoroduDetails } from "./IkoroduContainer";
 export { default as MoreProjects } from "./MoreProjectsContainer";
 export { default as ViewProject } from "./Projects/ViewProject";
+export {default as TestimonyContainer} from "./TestimonialContainer"

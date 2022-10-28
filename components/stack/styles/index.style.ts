@@ -44,6 +44,7 @@ export const StackWrapper = styled.div<StackPropsType>`
   @media (max-width: ${Screen.xsm}) {
     width: ${({ xsm_width }) => xsm_width};
     margin: ${({ xm }) => (xm ? xm : "")};
+    flex-direction: ${({ xm_direction }) => (xm_direction ? xm_direction : "")};
   }
   @media (max-width: ${Screen.xxsm}) {
     width: ${({ xsm_width }) => xsm_width};
