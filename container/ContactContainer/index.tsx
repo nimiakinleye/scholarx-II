@@ -19,7 +19,7 @@ export default function Contact() {
               form on the right to connect with a member of our team.
             </Text>
           </Stack>
-          <Stack className="form">
+          <Stack width="100%" className="form">
             <Form/>
           </Stack>
         </Stack>

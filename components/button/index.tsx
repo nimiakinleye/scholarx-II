@@ -11,6 +11,9 @@ type Props = {
   onMouseLeave?: any;
   width?: string;
   color?: string;
+  size?: string;
+  type?: "button" | "submit" | "reset";
+  text?: string;
 }
 
 export default function Button({ loading, children, ...resProps }:Props) {
