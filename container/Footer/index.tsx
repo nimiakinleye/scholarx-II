@@ -21,17 +21,16 @@ export default function Footer() {
                 </Text>
               </Stack>
               <Stack width="auto" direction="row" gap="8px" alignItems="center">
-                <SocialIcon link="https://www.instagram.com/come_learnam/" icon={<InstagramIcon color={"#CCCCD1"} />} />
-                <SocialIcon link="https://www.linkedin.com/company/learnam/" icon={<LinkedinIcon color={"#CCCCD1"} />} />
-                <SocialIcon link="https://m.facebook.com/comelearnAM" icon={<FacebookIcon color={"#CCCCD1"} />} />
-                <SocialIcon link="https://twitter.com/comeLearnAM" icon={<TwitterIcon color={"#CCCCD1"} />} />
+                <SocialIcon link="https://www.instagram.com/scholarx/" icon={<InstagramIcon color={"#CCCCD1"} />} />
+                <SocialIcon link="https://ng.linkedin.com/company/scholarx/" icon={<LinkedinIcon color={"#CCCCD1"} />} />
+                <SocialIcon link="https://m.facebook.com/ScholarxPage/" icon={<FacebookIcon color={"#CCCCD1"} />} />
+                <SocialIcon link="https://twitter.com/scholarxEdu/" icon={<TwitterIcon color={"#CCCCD1"} />} />
               </Stack>
             </Stack>
             <Stack width="auto" gap="24px">
               <Text color={"#ffffff"} as='h4'>Products</Text>
               <a href="https://learnam.africa" target={"_blank"}><Text size='18px' lineHeight='28px' as='p'>LearnAM</Text></a>
               <a href="https://hirequickstaff.com" target={"_blank"}><Text size='18px' lineHeight='28px' as='p'>Quickstaff</Text></a>
-              <a href="/blog" target={"_blank"}><Text size='18px' lineHeight='28px' as='p'>E-transcript</Text></a>
             </Stack>
             <Stack width="auto" gap="24px">
               <Text color={"#ffffff"} as='h4'>Company</Text>
