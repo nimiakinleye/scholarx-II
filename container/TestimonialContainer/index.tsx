@@ -6,24 +6,10 @@ import "slick-carousel/slick/slick-theme.css";
 import { Container, Stack, Text } from "../../components";
 import { TestimonialWrapper } from "./styles/index.styles";
 import { Colors } from "../../theme/colors";
-import Femi from "../../assets/images/Femi.png";
+
 
 export default function TestimonyContainer() {
-  /* const settings = {
-    //className: "center",
-    //centerMode: true,
-    // infinite: true,
-    // centerPadding: "50px",
-    // slidesToShow: 1,
-    // speed: 500,
-    // autoplaySpeed: 2000,
-    // cssEase: "linear",
-    // slidesToScroll: 1,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };*/
+
   const sliderSettings = {
     //dots: true,
     slidesToShow: 1,
@@ -74,7 +60,6 @@ export default function TestimonyContainer() {
                   // <Slider {...sliderSettings}>
                   <Stack
                     className="testimonialCard"
-                    //width="100%"
                     direction="row"
                     p={"80px 100px 84px 100px"}
                     sm_p={"80px 10px 10px 10px"}
