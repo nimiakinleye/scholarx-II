@@ -14,7 +14,7 @@ export default function FoundingTeam(){
             <Stack m={"80px  0 0"}>
                 <Stack>
                     <Text as="h4" color={Colors.primary} size={"48px"} sm_size={"21px"}>
-                    Our Founding Team
+                    Our Team
                     </Text>
                 </Stack>
                 <Stack className="founding-team-members" direction="row" gap={"22px"}  p={"40px 0 40px 0"} md_flexWrap="wrap" sm_alignItems="center" sm_justifyContent="center">
