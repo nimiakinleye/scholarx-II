@@ -21,8 +21,8 @@
     "react-countup": "^6.3.2",
     "react-dom": "18.2.0",
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
     "react-toastify": "^9.0.8",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",
     "yup": "^0.32.11"
   },

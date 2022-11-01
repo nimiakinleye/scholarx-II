@@ -91,9 +91,12 @@ export default function Form() {
               onChange={handleChange}
             />
           </Stack>
-        </form>
-        <label htmlFor="help">How can we help you?</label>
+          <Stack m="16px 0">
+          <label htmlFor="help">How can we help you?</label>
         <textarea placeholder="Input message" cols={30} rows={10} name="message" onChange={handleChange} />
+          </Stack>
+        </form>
+       
 
         <Stack direction="row" justifyContent="center" m={"30px 0 50px 0"}>
           <Button loading={loading} width="auto" type="submit" color={Colors.yellow} text={Colors.neutral} onClick={handleSubmit}>

@@ -2,6 +2,11 @@ import styled from "styled-components";
 import { Colors } from "../../../theme/colors";
 
 export const FormWrapper = styled.div`
+// form{
+//   padding-left:40px;
+//   padding-right:50px;
+
+// }
   width: 100%;
   max-width: 590px;
   label {
@@ -10,8 +15,10 @@ export const FormWrapper = styled.div`
     padding-bottom: 8px;
   }
   input {
+  
     color: ${Colors.gray_600};
     height: 40px;
+    width:100%;
     padding: 12px;
     border-radius: 4px;
   }
