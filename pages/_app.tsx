@@ -1,5 +1,7 @@
 import { GlobalStyle } from '../styles/globals'
 import type { AppProps } from 'next/app'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "aos/dist/aos.css"
 import AOS from 'aos';
 import { useEffect } from 'react';
