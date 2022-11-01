@@ -20,15 +20,11 @@
     "react": "18.2.0",
     "react-countup": "^6.3.2",
     "react-dom": "18.2.0",
-<<<<<<< HEAD
     "react-slick": "^0.29.0",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^5.3.6"
-=======
     "react-toastify": "^9.0.8",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",
     "yup": "^0.32.11"
->>>>>>> 12cffddf2bd6967a16f8290f651e03fea6c90400
   },
   "devDependencies": {
     "@types/node": "18.7.23",
