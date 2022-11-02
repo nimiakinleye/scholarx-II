@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Container,Stack,Text } from "../../components"
+import { Container, Stack, Text } from "../../components"
 import { Colors } from "../../theme/colors"
 import Bola from '../../assets/images/Bola.png'
 import Dami from "../../assets/images/Dami.png"
@@ -8,18 +8,18 @@ import Maxwell from "../../assets/images/Maxwell.png"
 import Olabisi from "../../assets/images/Olabisi.png"
 
 
-export default function FoundingTeam(){
-    return(
+export default function FoundingTeam() {
+    return (
         <Container>
             <Stack m={"80px  0 0"}>
                 <Stack>
                     <Text as="h4" color={Colors.primary} size={"48px"} sm_size={"21px"}>
-                    Our Team
+                        Our Team
                     </Text>
                 </Stack>
-                <Stack className="founding-team-members" direction="row" gap={"22px"}  p={"40px 0 40px 0"} md_flexWrap="wrap" sm_alignItems="center" sm_justifyContent="center">
+                <Stack className="founding-team-members" direction="row" gap={"22px"} p={"40px 0 40px 0"} md_flexWrap="wrap" sm_alignItems="center" sm_justifyContent="center">
                     <Stack data-aos="flip-right">
-                        <Image src={Bola} alt={"Bola Lawal's Picture"}/>
+                        <Image src={Bola} alt={"Bola Lawal's Picture"} />
                         <Stack textAlign={"center"}>
                             <Text as="h4" size={"18px"}>
                                 Bola Lawal
@@ -30,7 +30,7 @@ export default function FoundingTeam(){
                         </Stack>
                     </Stack>
                     <Stack data-aos="flip-right">
-                        <Image src={Dami} alt={"Damilola Emuze's Picture"}/>
+                        <Image src={Dami} alt={"Damilola Emuze's Picture"} />
                         <Stack textAlign={"center"}>
                             <Text as="h4" size={"18px"}>
                                 Damilola Emuze
@@ -41,7 +41,7 @@ export default function FoundingTeam(){
                         </Stack>
                     </Stack>
                     <Stack data-aos="flip-right">
-                        <Image src={Maxwell} alt={"Maxwell Ogunfuyi's Picture"}/>
+                        <Image src={Maxwell} alt={"Maxwell Ogunfuyi's Picture"} />
                         <Stack textAlign={"center"}>
                             <Text as="h4" size={"18px"}>
                                 Maxwell Ogunfuyi
@@ -52,7 +52,7 @@ export default function FoundingTeam(){
                         </Stack>
                     </Stack>
                     <Stack data-aos="flip-right">
-                        <Image src={Olabisi} alt={"Olabisi Kowobari's Picture"}/>
+                        <Image src={Olabisi} alt={"Olabisi Kowobari's Picture"} />
                         <Stack textAlign={"center"}>
                             <Text as="h4" size={"18px"}>
                                 Olabisi Kowobari

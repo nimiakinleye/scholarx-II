@@ -7,6 +7,7 @@ import LaptopMockup from "assets/images/laptop_mock.png"
 import Image from 'next/image'
 
 export default function FocusContainer() {
+  const productsWidth="1200px"
   return (
     <ProductsWrapper>
       <Container>
@@ -15,7 +16,7 @@ export default function FocusContainer() {
             <Text.Small>Our Products</Text.Small>
             <Text lineHeight="48px" as="h1">Our dreams have grown bigger with time.</Text>
           </Stack>
-          <Stack m="48px 0 0 0" direction="row" sm_justifyContent='center' justifyContent='space-between' alignItems='center' md_direction='column' flexWrap='wrap'>
+          <Stack maxWidth={productsWidth} m="48px 0 0 0" direction="row" sm_justifyContent='center' justifyContent='space-between' alignItems='center' md_direction='column' flexWrap='wrap'>
             <Stack direction="column" className='prod_image' width="400px" height="469px">
               <Image width="100%" height="100%" objectFit='cover' layout='responsive' src={PhoneMockup} />
             </Stack>
@@ -31,8 +32,8 @@ export default function FocusContainer() {
               </Stack>
             </Stack>
           </Stack>
-          <Stack m="48px 0 0 0" direction="row-reverse" sm_justifyContent='center' justifyContent='space-between' alignItems='center' md_direction='column' flexWrap='wrap'>
-            <Stack direction="column" className='prod_image' width="400px" height="500px">
+          <Stack maxWidth={productsWidth} m="48px 0 0 0" direction="row-reverse" sm_justifyContent='center' justifyContent='space-between' alignItems='center' md_direction='column' flexWrap='wrap'>
+            <Stack direction="column" className='prod_image' width="500px" sm_height="auto" height="500px">
               <Image width="100%" height="100%" objectFit='contain' layout='responsive' src={LaptopMockup} />
             </Stack>
             <Stack maxWidth="517px" sm_textAlign='center'>

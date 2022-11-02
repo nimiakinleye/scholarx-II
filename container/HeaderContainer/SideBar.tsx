@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react'
 import { Container, Stack } from '../../components';
 import { CancelIcon } from '../../components/icons';
-import { CancelIconWrapper, NavWrapper, SidebarWrapper } from './styles/index.styles'
+import { CancelIconWrapper, NavBgWrapper, NavWrapper, SidebarWrapper } from './styles/index.styles'
 
 export default function SideBar({ show, toggle }: { show: boolean; toggle: () => void }) {
   const links = [
@@ -32,9 +32,10 @@ export default function SideBar({ show, toggle }: { show: boolean; toggle: () =>
           </Container>
         </Stack>
       </NavWrapper>
+      <NavBgWrapper></NavBgWrapper>
       <CancelIconWrapper>
         <Container>
-          <Stack m="90px 0 0 0" onClick={toggle}>
+          <Stack m="90px 0" onClick={toggle}>
             <CancelIcon />
           </Stack>
         </Container>
