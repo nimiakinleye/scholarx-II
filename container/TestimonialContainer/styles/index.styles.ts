@@ -31,12 +31,14 @@ export const TestimonialWrapper = styled.div`
 }
 
 .testimonialCard{
-    position:relative;
     background: url(/images/testimonial-background.png);
     background-position: top left;
     background-color:#E5E5F2;
     background-repeat:no-repeat;
     border-radius:8px;
+}
+.testimonies{
+    position:relative;
 }
 @media (max-width:1024px){
     .prev{

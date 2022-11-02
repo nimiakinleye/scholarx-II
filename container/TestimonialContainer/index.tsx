@@ -66,7 +66,7 @@ export default function TestimonyContainer() {
   return (
     <TestimonialWrapper>
       <Container>
-        <Stack width="100%">
+        <Stack width="100%" className="testimonies">
           <Stack color={Colors.primary} p={"60px 0 0 0"}>
             <Text as="p" size={"16px"}>
               Testimonials
