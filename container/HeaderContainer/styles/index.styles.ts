@@ -16,9 +16,12 @@ export const SidebarWrapper = styled.div<SideBarProps>`
   top: 0;
   right: 0;
   width: ${({ show }) => (show ? "100vw" : 0)};
+  width: 100%;
   height: ${({ show }) => (show ? "100%" : 0)};
   transition: 0.5s;
   background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  max-width: none;
 `;
 
 export const NavWrapper = styled.div`
@@ -48,8 +51,37 @@ export const CancelIconWrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 51;
-  width: 100%;
+  width: 100vw;
+  max-width: none;
   display: flex;
   justify-content: end;
   cursor: pointer;
+`
+
+export const NavBgWrapper = styled.div`
+  background-image: url(/images/nav_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative:
+  z-index: 0;
+  
+  ::after {
+    width: 100vh;
+    max-width: 50vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: "";
+    color: rgba(0, 0, 0, 0)
+  }
+
+  @media (max-width: ${Screen.lg}) {
+    display: none;
+  }
 `

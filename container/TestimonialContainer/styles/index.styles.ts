@@ -1,34 +1,30 @@
 import styled from "styled-components";
 
 export const TestimonialWrapper = styled.div`
-.arrow{
-
-    color: #2B2B40;
-    background-color:#E5E5F2;
-    border-radius:50%;
-    cursor:pointer;
-    z-index:100;
-    border: 1px solid #80808C;
-    padding:12px 15px;
-
-    
-}
-.prev{
-    position:absolute;
-    bottom:50%;
-    left:7%;
-    
-    
-}
-.next{
-    position:absolute;
-    bottom:50%;
-    right:7%;
-    
-}
-.image{
-    border-radius:8px;
-}
+  .arrow {
+    color: #2b2b40;
+    width: 15px;
+    height: 15px;
+    background-color: #e5e5f2;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    border: 1px solid #80808c;
+    padding: 12px;
+  }
+  .prev {
+    position: absolute;
+    bottom: 50%;
+    left: 7%;
+  }
+  .next {
+    position: absolute;
+    bottom: 50%;
+    right: 7%;
+  }
+  .image {
+    border-radius: 8px;
+  }
 
 .testimonialCard{
     background: url(/images/testimonial-background.png);
@@ -49,5 +45,4 @@ export const TestimonialWrapper = styled.div`
         right:0;
     }
 }
-
 `

@@ -4,6 +4,8 @@ export const GlobalStyle = createGlobalStyle`
   html {
     font-family: 'Mulish', sans-serif;
     scroll-behavior: smooth;
+    max-width: 1800px;
+    margin: 0 auto;
   }
   body, p, div, h1, h2, h3, h4, h5, h6 {
     margin: 0;

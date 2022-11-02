@@ -17,12 +17,12 @@ export default function FocusContainer() {
   return (
     <FocusWrapper>
       <Container>
-        <Stack>
+        <Stack width="100%">
           <Stack data-aos="fade-up" color={Colors.primary} maxWidth='491px'>
             <Text.Small>What is our Focus?</Text.Small>
             <Text lineHeight="48px" as="h1">We are focused on imparting lifelong skills to Africans</Text>
           </Stack>
-          <Stack m="48px 0 0 0" gap="24px" direction="row" sm_justifyContent='center' justifyContent='flex-start' sm_flexWrap='wrap'>
+          <Stack m="48px 0 0 0" maxWidth="1200px" gap="24px" direction="row" sm_justifyContent='center' justifyContent='space-between' flexWrap='wrap'>
             {focus_cards.map((card:{title:string, content:string, image: StaticImageData}, i) => {
               return (
                 <FocusCard key={i} details={card}/>
