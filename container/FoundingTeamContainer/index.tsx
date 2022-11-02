@@ -9,6 +9,12 @@ import Olabisi from "../../assets/images/Olabisi.png"
 
 
 export default function FoundingTeam() {
+    const team = [
+        { name: "Bola Lawal", position: "CEO/Co-Founder", image: Bola, alt: "Bola Lawal's Picture", link: "https://www.linkedin.com/in/bola-l-3344ba32/" },
+        { name: "Damilola Emuze", position: "COO/Co-Founder", image: Dami, alt: "Damilola Emuze's Picture", link: "https://www.linkedin.com/in/damilola-emuze-187389166/" },
+        { name: "Maxwell Ogunfuyi", position: "CTO/Co-Founder", image: Maxwell, alt: "Maxwell Ogunfuyi's Picture", link: "https://www.linkedin.com/in/maxwell-ogunfuyi-3581a68/" },
+        { name: "Olabisi Kowobari", position: "Business Development Manager", image: Olabisi, alt: "Olabisi Kowobari's Picture", link: "https://www.linkedin.com/in/olabisierinoshokowobari/" },
+    ]
     return (
         <Container>
             <Stack m={"80px  0 0"}>
@@ -18,50 +24,23 @@ export default function FoundingTeam() {
                     </Text>
                 </Stack>
                 <Stack className="founding-team-members" direction="row" gap={"22px"} p={"40px 0 40px 0"} md_flexWrap="wrap" sm_alignItems="center" sm_justifyContent="center">
-                    <Stack data-aos="flip-right">
-                        <Image src={Bola} alt={"Bola Lawal's Picture"} />
-                        <Stack textAlign={"center"}>
-                            <Text as="h4" size={"18px"}>
-                                Bola Lawal
-                            </Text>
-                            <Text as="p" size={"14px"} color={Colors.primary_blue_70}>
-                                CEO/Co-Founder
-                            </Text>
-                        </Stack>
-                    </Stack>
-                    <Stack data-aos="flip-right">
-                        <Image src={Dami} alt={"Damilola Emuze's Picture"} />
-                        <Stack textAlign={"center"}>
-                            <Text as="h4" size={"18px"}>
-                                Damilola Emuze
-                            </Text>
-                            <Text as="p" size={"14px"} color={Colors.primary_blue_70}>
-                                COO/Co-Founder
-                            </Text>
-                        </Stack>
-                    </Stack>
-                    <Stack data-aos="flip-right">
-                        <Image src={Maxwell} alt={"Maxwell Ogunfuyi's Picture"} />
-                        <Stack textAlign={"center"}>
-                            <Text as="h4" size={"18px"}>
-                                Maxwell Ogunfuyi
-                            </Text>
-                            <Text as="p" size={"14px"} color={Colors.primary_blue_70}>
-                                CTO/Co-Founder
-                            </Text>
-                        </Stack>
-                    </Stack>
-                    <Stack data-aos="flip-right">
-                        <Image src={Olabisi} alt={"Olabisi Kowobari's Picture"} />
-                        <Stack textAlign={"center"}>
-                            <Text as="h4" size={"18px"}>
-                                Olabisi Kowobari
-                            </Text>
-                            <Text as="p" size={"14px"} color={Colors.primary_blue_70}>
-                                Business Development Manager
-                            </Text>
-                        </Stack>
-                    </Stack>
+                    {
+                        team?.map((member: any, i: number) => {
+                            return (
+                                <Stack key={i} data-aos="flip-right">
+                                    <a href={member?.link} target={"_blank"}><Image className="pointer" src={member?.image} alt={member.alt} /></a>
+                                    <Stack textAlign={"center"}>
+                                        <Text as="h4" size={"18px"}>
+                                            {member?.name}
+                                        </Text>
+                                        <Text as="p" size={"14px"} color={Colors.primary_blue_70}>
+                                            {member.position}
+                                        </Text>
+                                    </Stack>
+                                </Stack>
+                            )
+                        })
+                    }
                 </Stack>
             </Stack>
         </Container>
