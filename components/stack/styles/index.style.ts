@@ -39,9 +39,7 @@ export const StackWrapper = styled.div<StackPropsType>`
     direction: ${({ sm_direction }) => (sm_direction ? sm_direction : "")};
   }
 
-  @media (max-width: ${Screen.md}) {
-    width: ${({ md_width }) => md_width};
-  }
+ 
   @media (max-width: ${Screen.xsm}) {
     width: ${({ xsm_width }) => xsm_width};
     margin: ${({ xm }) => (xm ? xm : "")};

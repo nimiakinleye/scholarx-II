@@ -17,7 +17,7 @@ export default function FoundingTeam() {
     ]
     return (
         <Container>
-            <Stack m={"80px  0 0"}>
+            <Stack m={"80px 0 0 0"}>
                 <Stack>
                     <Text as="h4" color={Colors.primary} size={"48px"} sm_size={"21px"}>
                         Our Team
@@ -28,7 +28,7 @@ export default function FoundingTeam() {
                         team?.map((member: any, i: number) => {
                             return (
                                 <Stack key={i} data-aos="flip-right">
-                                    <a href={member?.link} target={"_blank"}><Image className="pointer" src={member?.image} alt={member.alt} /></a>
+                                    <a href={member?.link} target={"_blank"} rel="noreferrer"><Image className="pointer" src={member?.image} alt={member.alt} /></a>
                                     <Stack textAlign={"center"}>
                                         <Text as="h4" size={"18px"}>
                                             {member?.name}
