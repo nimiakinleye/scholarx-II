@@ -6,6 +6,7 @@ import Bola from '../../assets/images/Bola.png'
 import Dami from "../../assets/images/Dami.png"
 import Maxwell from "../../assets/images/Maxwell.png"
 import Olabisi from "../../assets/images/Olabisi.png"
+import { TeamWrapper } from "./styles/index.styles";
 
 
 export default function FoundingTeam() {
@@ -16,19 +17,20 @@ export default function FoundingTeam() {
         { name: "Olabisi Kowobari", position: "Business Development Manager", image: Olabisi, alt: "Olabisi Kowobari's Picture", link: "https://www.linkedin.com/in/olabisierinoshokowobari/" },
     ]
     return (
-        <Container>
-            <Stack m={"80px  0 0"}>
-                <Stack>
-                    <Text as="h4" color={Colors.primary} size={"48px"} sm_size={"21px"}>
+        <TeamWrapper>
+        <Container >
+            <Stack m={"80px 0 0 0"}>
+                
+                    <Text as="h4" color={Colors.primary} size={"48px"} sm_size={"21px"} >
                         Our Team
                     </Text>
-                </Stack>
-                <Stack className="founding-team-members" direction="row" gap={"22px"} p={"40px 0 40px 0"} md_flexWrap="wrap" sm_alignItems="center" sm_justifyContent="center">
+                
+                <Stack className="founding-team-members" direction="row" gap={"22px"} p={"40px 0 40px 0"} md_flexWrap="wrap" md_alignItems="center" md_justifyContent="center">
                     {
                         team?.map((member: any, i: number) => {
                             return (
                                 <Stack key={i} data-aos="flip-right">
-                                    <a href={member?.link} target={"_blank"}><Image className="pointer" src={member?.image} alt={member.alt} /></a>
+                                    <a href={member?.link} target={"_blank"} rel="noreferrer"><Image className="pointer" src={member?.image} alt={member.alt} /></a>
                                     <Stack textAlign={"center"}>
                                         <Text as="h4" size={"18px"}>
                                             {member?.name}
@@ -44,5 +46,6 @@ export default function FoundingTeam() {
                 </Stack>
             </Stack>
         </Container>
+        </TeamWrapper>
     )
 }

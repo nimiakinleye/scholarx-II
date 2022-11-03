@@ -13,9 +13,11 @@ export const ContainerWrapper = styled.div<ContainerType>`
   * {
     max-width: 1500px;
   }
+  
 
   @media(max-width: ${Screen.lg}) {
     padding: 0 20px;
+    
   }
   @media(max-width: ${Screen.md}) {
     align-items: ${({sm_alignItems}) => sm_alignItems ? sm_alignItems : "center"};

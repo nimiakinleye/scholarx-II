@@ -26,20 +26,23 @@ export const TestimonialWrapper = styled.div`
     border-radius: 8px;
   }
 
-  .testimonialCard {
-    position: relative;
+.testimonialCard{
     background: url(/images/testimonial-background.png);
     background-position: top left;
-    background-color: #e5e5f2;
-    background-repeat: no-repeat;
-    border-radius: 8px;
-  }
-  @media (max-width: 1024px) {
-    .prev {
-      left: 0;
+    background-color:#E5E5F2;
+    background-repeat:no-repeat;
+    border-radius:8px;
+}
+.testimonies{
+    position:relative;
+}
+@media (max-width:1024px){
+    .prev{
+        left:0;
+        
     }
-    .next {
-      right: 0;
+    .next{
+        right:0;
     }
-  }
-`;
+}
+`

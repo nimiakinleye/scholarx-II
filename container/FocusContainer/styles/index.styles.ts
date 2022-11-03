@@ -5,6 +5,7 @@ export const FocusWrapper = styled.div`
   padding-top: 48px;
   padding-bottom: 180px;
   background: ${Colors.primary_blue_50};
+  
 `;
 
 export const FocusCardWrapper = styled.div`
