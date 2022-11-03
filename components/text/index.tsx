@@ -17,6 +17,7 @@ export type TextOwnProps<E extends React.ElementType> = {
   borderwidth?: string;
   borderstyle?: string;
   bordercolor?: string;
+  sm_lineHeight?: string;
 };
   
 
@@ -36,6 +37,7 @@ export type TextPropsType = {
   borderwidth?: string;
   borderstyle?: string;
   bordercolor?: string;
+  sm_lineHeight?: string;
 
 };
 

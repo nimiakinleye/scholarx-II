@@ -6,10 +6,10 @@ import about from "../../assets/images/about-2.png";
 import { TeamWrapper } from "./styles/index.styles";
 export default function Team() {
   return (
-    <TeamWrapper>
-    <Container>
+    // <TeamWrapper>
+    <Container alignItems="flex-start">
       
-        <Stack m={"80px 0 80px 0"} >
+        <Stack width="100%" m={"80px 0 80px 0"} >
           <Stack data-aos="fade-up">
             <Text
               as="h4"
@@ -24,11 +24,11 @@ export default function Team() {
             </Text>
           </Stack>
           <Stack data-aos="fade-up" p={"40px 0 0 0"}>
-            <Image src={about} alt={"team members"} />
+            <Image objectFit="cover" objectPosition={"center"} src={about} alt={"team members"} />
           </Stack>
         </Stack>
     
     </Container>
-    </TeamWrapper>
+    // </TeamWrapper>
   );
 }

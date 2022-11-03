@@ -20,6 +20,7 @@ export const TextWrapper = styled.div<TextPropsType>`
   @media (max-width: ${Screen.sm}) {
     font-size: ${({ sm_size }) => (sm_size ? sm_size : "")};
     text-align: ${({ sm_align }) => (sm_align ? sm_align : "")};
+    line-height: ${({ sm_lineHeight }) => (sm_lineHeight ? sm_lineHeight : "")};
   }
 `;
 

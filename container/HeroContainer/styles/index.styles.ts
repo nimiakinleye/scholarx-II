@@ -20,5 +20,12 @@ export const HeroWrapper = styled.div`
   }
   @media(max-width:500px){
     height:100%;
+    font-size: 100% !important;
+    font-weight: 200 !important;
+
+    .heading {
+      font-size: 100%;
+    }
+    
   }
 `;

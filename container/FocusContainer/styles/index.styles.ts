@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Colors } from "../../../theme/colors";
+import { Screen } from "../../../theme/screens";
 
 export const FocusWrapper = styled.div`
   padding-top: 48px;
@@ -9,14 +10,19 @@ export const FocusWrapper = styled.div`
 `;
 
 export const FocusCardWrapper = styled.div`
-  width: 300px;
+  width: 250px;
   min-width:200px;
-  height: 240px;
+  min-height: auto;
+  height: 200px;
   padding: 32px;
   background: ${Colors.gray_100};
   border: 1px solid #f5f5f6;
   box-shadow: 0px 2px 8px rgba(43, 43, 64, 0.08);
   border-radius: 8px;
+
+  @media(max-width: ${Screen.sm}) {
+    width: 100%;
+  }
 `;
 
 export const IconWrapper = styled.div`

@@ -17,15 +17,15 @@ export default function FoundingTeam() {
         { name: "Olabisi Kowobari", position: "Business Development Manager", image: Olabisi, alt: "Olabisi Kowobari's Picture", link: "https://www.linkedin.com/in/olabisierinoshokowobari/" },
     ]
     return (
-        <TeamWrapper>
-        <Container >
-            <Stack m={"80px 0 0 0"}>
-                
-                    <Text as="h4" color={Colors.primary} size={"48px"} sm_size={"21px"} >
-                        Our Team
-                    </Text>
-                
-                <Stack className="founding-team-members" direction="row" gap={"22px"} p={"40px 0 40px 0"} md_flexWrap="wrap" md_alignItems="center" md_justifyContent="center">
+        // <TeamWrapper>
+        <Container alignItems="flex-start">
+            <Stack m={"80px 0 0 0"} width="100%">
+
+                <Text as="h4" color={Colors.primary} size={"48px"} sm_size={"21px"} >
+                    Our Team
+                </Text>
+
+                <Stack className="founding-team-members" width="100%" justifyContent="space-between" direction="row" gap={"22px"} p={"40px 0 40px 0"} md_flexWrap="wrap" md_alignItems="center" sm_justifyContent="center">
                     {
                         team?.map((member: any, i: number) => {
                             return (
@@ -46,6 +46,6 @@ export default function FoundingTeam() {
                 </Stack>
             </Stack>
         </Container>
-        </TeamWrapper>
+        // </TeamWrapper>
     )
 }

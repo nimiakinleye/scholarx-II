@@ -11,17 +11,20 @@ export const SubscribeWrapper = styled.div`
   // background: #ccc;
   background-position: center;
   background-size: cover;
-  padding: 40px;
+  padding: 40px 0;
   // width: 100%;
   margin-top: 105px;
 
   @media (max-width: ${Screen.md}) {
     padding: 32px 8px;
   }
+  @media (max-width: ${Screen.xsm}) {
+    padding: 32px 0;
+  }
 `;
 
 export const InnerSubscribeWrapper = styled.div`
-  width: 100%;
+  // width: 100%;
   max-width: 673px;
   min-height: 248px;
   background: #f5f5f6;
@@ -57,5 +60,8 @@ export const InnerSubscribeWrapper = styled.div`
   @media(max-width: ${Screen.lg}) {
     flex-direction: column;
     align-items: center;
+  }
+  @media(max-width: ${Screen.xsm}) {
+    padding: 12px;
   }
 `;

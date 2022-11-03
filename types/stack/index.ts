@@ -27,6 +27,7 @@ export type StackPropsType = {
   lg_alignItems?: string;
   sm_textAlign?: string;
   md_textAlign?: string;
+  xs_textAlign?: string;
   sm_gap?: string;
   md_gap?: string;
   sm_m?: string;

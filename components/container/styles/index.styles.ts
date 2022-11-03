@@ -16,7 +16,7 @@ export const ContainerWrapper = styled.div<ContainerType>`
   
 
   @media(max-width: ${Screen.lg}) {
-    padding: 0 20px;
+    padding: 0 12px;
     
   }
   @media(max-width: ${Screen.md}) {

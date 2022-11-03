@@ -63,7 +63,7 @@ export default function TestimonyContainer() {
   ];
 
   return (
-    <TestimonialWrapper>
+    <TestimonialWrapper id="testimonials">
       <Container>
         <Stack width="100%" className="testimonies">
           <Stack color={Colors.primary} p={"60px 0 0 0"}>

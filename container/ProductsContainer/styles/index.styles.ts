@@ -7,7 +7,7 @@ export const ProductsWrapper = styled.div`
 
   @media(max-width: ${Screen.sm}) {
     .prod_image {
-      max-width: 350px;
+      max-width: 100%;
     }
   }
 `

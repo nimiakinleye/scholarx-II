@@ -34,9 +34,9 @@ export default function Footer() {
             </Stack>
             <Stack width="auto" gap="24px">
               <Text color={"#ffffff"} as='h4'>Company</Text>
-              <Link href="/#benefits"><a><Text size='18px' lineHeight='28px' as='p'>About us</Text></a></Link>
-              <Link href="/contact-us"><a><Text size='18px' lineHeight='28px' as='p'>Contact us</Text></a></Link>
-              <Link href="/blog"><a><Text size='18px' lineHeight='28px' as='p'>Testimonials</Text></a></Link>
+              <Link href="/about-us"><a><Text size='18px' lineHeight='28px' as='p'>About us</Text></a></Link>
+              <Link href="/about-us#contact-us"><a><Text size='18px' lineHeight='28px' as='p'>Contact us</Text></a></Link>
+              <Link href="/#testimonials"><a><Text size='18px' lineHeight='28px' as='p'>Testimonials</Text></a></Link>
             </Stack>
             <Stack width="auto" gap="24px">
               <Text color={"#ffffff"} as='h4'>Support</Text>

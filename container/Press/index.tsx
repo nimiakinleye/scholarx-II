@@ -54,6 +54,7 @@ export default function PressContainer() {
         gap="81px"
         alignItems="center"
         width={"100%"}
+        flexWrap="wrap"
       >
         {mapImages}
       </Stack>
