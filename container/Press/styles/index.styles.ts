@@ -9,6 +9,7 @@ export const PressWrapper = styled.div`
   margin-top: 122px;
   margin-bottom: 64px;
   text-align: center;
+  width:100%;
 
   img {
     filter: grayscale(100%) opacity(30%);

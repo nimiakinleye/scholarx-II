@@ -49,7 +49,7 @@ export default function Form() {
     <FormWrapper>
       <Stack width="100%" sm_p="20px" p={"50px"} justifyContent="center">
         <form>
-          <Stack m="16px 0" direction="row" justifyContent="space-between" md_direction="column" gap={"16px"} sm_gap={"16px"}>
+          <Stack m="16px 0" direction="row" justifyContent="space-between" xm_direction="column" gap={"16px"} sm_gap={"16px"}>
             <Stack width="100%">
               <label htmlFor="firstName">First Name</label>
               <input

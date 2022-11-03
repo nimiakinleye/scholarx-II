@@ -29,8 +29,8 @@ export default function Footer() {
             </Stack>
             <Stack width="auto" gap="24px">
               <Text color={"#ffffff"} as='h4'>Products</Text>
-              <a href="https://learnam.africa" target={"_blank"}><Text size='18px' lineHeight='28px' as='p'>LearnAM</Text></a>
-              <a href="https://hirequickstaff.com" target={"_blank"}><Text size='18px' lineHeight='28px' as='p'>Quickstaff</Text></a>
+              <a href="https://learnam.africa" target={"_blank"} rel="noreferrer"><Text size='18px' lineHeight='28px' as='p'>LearnAM</Text></a>
+              <a href="https://hirequickstaff.com" target={"_blank"} rel="noreferrer"><Text size='18px' lineHeight='28px' as='p'>Quickstaff</Text></a>
             </Stack>
             <Stack width="auto" gap="24px">
               <Text color={"#ffffff"} as='h4'>Company</Text>

@@ -31,15 +31,14 @@ export default function TestimonyContainer() {
     nextArrow: <NextArrow onClick={() => {}} />,
     prevArrow: <PrevArrow onClick={() => {}} />,
     responsive: [
-      
       {
         breakpoint: 600,
         settings: {
-          arrows:false,
-          dots:true,
-        }
-      }
-    ]
+          arrows: false,
+          dots: true,
+        },
+      },
+    ],
   };
 
   const testimonies = [
@@ -51,14 +50,14 @@ export default function TestimonyContainer() {
     },
     {
       name: "Aminat Zakariya",
-      title: "Trader, Oyingbo market",
-      body: "I found Scholar X when I was on the verge of dropping out of school. There was no financial support coming from home but thanks to Scholar X, I am in my final year at school.",
+      title: "Law Student, University of Ibadan",
+      body: "I found Scholar X when I was on the verge of dropping out of school. Things were so hard and there was no financial support coming from home. In fact, I was very tired because I was on my own. As God would have it, fortune shined on me when my friend told me about Scholar X. Today, I am in my final year at school because of them!",
       image: "/images/aminat.png",
     },
     {
       name: "Princess Echibudu",
       title: "Trader, Oyingbo market",
-      body: "I still can't believe that I can learn digital skills in Igbo! Kudos to Scholar X for making LearnAM for us.",
+      body: "I was in my shop one day when they brought me a product I can use on my phone. I was not interested at first because I did not have time. But, when I opened it, I saw that I could learn how to sell my market online. Not only that, I can learn everything in Igbo! Kudos to Scholar X! I have never seen this king of thing in my life.",
       image: "/images/princess.png",
     },
   ];

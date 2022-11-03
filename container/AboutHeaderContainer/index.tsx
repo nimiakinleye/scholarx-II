@@ -24,7 +24,7 @@ export default function AboutHeader() {
               as="h4"
               color={Colors.primary}
               weight={"700"}
-              sm_align="center" sm_size={"21px"}
+               sm_size={"21px"}
               size={"48px"}
             >
               About Us

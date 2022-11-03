@@ -3,12 +3,13 @@ import Image from "next/image";
 import { Container, Stack, Text } from "../../components";
 import { Colors } from "../../theme/colors";
 import about from "../../assets/images/about-2.png";
-
+import { TeamWrapper } from "./styles/index.styles";
 export default function Team() {
   return (
+    <TeamWrapper>
     <Container>
       
-        <Stack m={"80px 0 0 0"} >
+        <Stack m={"80px 0 80px 0"} >
           <Stack data-aos="fade-up">
             <Text
               as="h4"
@@ -28,5 +29,6 @@ export default function Team() {
         </Stack>
     
     </Container>
+    </TeamWrapper>
   );
 }

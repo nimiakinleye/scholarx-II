@@ -17,7 +17,7 @@ export default function FocusContainer() {
             <Text lineHeight="48px" as="h1">Our dreams have grown bigger with time.</Text>
           </Stack>
           <Stack alignItems="center">
-            <Stack maxWidth={productsWidth} width="100%" m="48px 0 0 0" direction="row" sm_justifyContent='center' justifyContent='space-between' alignItems='center'  flexWrap='wrap'>
+            <Stack maxWidth={productsWidth} width="100%" m="48px 0 0 0" direction="row" md_justifyContent='center' justifyContent='space-between' alignItems='center'  flexWrap='wrap' md_direction="column">
               <Stack direction="column" className='prod_image' width="400px" height="469px">
                 <Image width="100%" height="100%" objectFit='cover' layout='responsive' src={PhoneMockup} />
               </Stack>
@@ -35,8 +35,8 @@ export default function FocusContainer() {
             </Stack>
           </Stack>
           <Stack alignItems="center">
-            <Stack maxWidth={productsWidth}  width="100%" m="48px 0 0 0" direction="row-reverse" sm_justifyContent='center' justifyContent='space-between' alignItems='center' flexWrap="wrap">
-              <Stack direction="column" className='prod_image' width="500px" sm_height="auto" height="500px">
+            <Stack maxWidth={productsWidth}  width="100%" m="48px 0 0 0" direction="row-reverse" md_justifyContent='center' justifyContent='space-between' alignItems='center' flexWrap="wrap" md_direction="column">
+              <Stack direction="column" className='prod_image' width="450px" sm_height="auto" height="500px">
                 <Image width="100%" height="100%" objectFit='contain' layout='responsive' src={LaptopMockup} />
               </Stack>
               <Stack maxWidth="517px" sm_textAlign='center'>

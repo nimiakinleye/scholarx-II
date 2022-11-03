@@ -1,4 +1,4 @@
-import { Text, Stack } from "../../components";
+import { Text, Stack, Container } from "../../components";
 import { PressWrapper } from "./styles/index.styles";
 import BusinessDay from "../../assets/images/business-day.png";
 import Disrupt from "../../assets/images/disrupt.png";
@@ -40,20 +40,27 @@ export default function PressContainer() {
   });
   return (
     <PressWrapper data-aos="zoom-in-down" className="container">
-      <Text as="h1" color={Colors.primary}>
+      <Container>
+        <Stack>
+        <Text as="h1" color={Colors.primary}>
         We have been featured on
       </Text>
       <Stack
         m="48px 0 0 0"
         direction="row"
-        sm_direction="column"
+        xm_direction="column"
         justifyContent="center"
         sm_gap="32px"
         gap="81px"
         alignItems="center"
+        width={"100%"}
       >
         {mapImages}
       </Stack>
+        </Stack>
+      </Container>
+      
+
     </PressWrapper>
   );
 }

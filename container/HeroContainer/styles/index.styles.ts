@@ -5,7 +5,6 @@ export const HeroWrapper = styled.div`
   background-position: center;
   background-size: cover;
   height: 100vh;
-  // padding-top: 77px;
   position: relative;
 
   .content {
@@ -18,5 +17,8 @@ export const HeroWrapper = styled.div`
     font-weight: 900;
     line-height: 64px important!;
     letter-spacing: 0.01em important!;
+  }
+  @media(max-width:500px){
+    height:100%;
   }
 `;
