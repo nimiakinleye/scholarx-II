@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Container,Stack,Text } from "../../../components";
+import { Container, Stack, Text } from "../../../components";
 import { Colors } from "../../../theme/colors";
 import ListProjects from "../ProjectsContainer/ListProjects";
 import { ProjectWrapper } from "./styles/index.styles";
@@ -30,17 +30,16 @@ export default function ProjectsCards() {
     fetchPosts()
 
   }, [])
-  
-    return (
+
+  return (
     <ProjectWrapper>
-        <Container>
-          <Stack width='100%'>
-            <Stack m="0 0 70px 0" color={Colors.primary}>
-             <Text as="h3" color={"#000000"}>Our Projects</Text>
-            </Stack>
-            <ListProjects projects={projects}/>
+      <Container>
+        <Stack width='100%'>
+          <Stack m="70px 0 0 0" color={Colors.primary}>
+            <ListProjects projects={projects} />
           </Stack>
-        </Container>
-     </ProjectWrapper>
-    )
-  }
+        </Stack>
+      </Container>
+    </ProjectWrapper>
+  )
+}
